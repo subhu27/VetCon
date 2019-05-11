@@ -1,0 +1,41 @@
+.jumbotron {
+	margin: 0px;
+	max-height: 60px;
+	padding: 10px;
+	background-color: #110011;
+}
+
+.jumbotron h5{
+	color: red;
+	padding-bottom:20px;
+	margin:0px;
+}
+
+#toShow{
+	
+	position: fixed;
+
+}
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  h5 {
+    font-size: 2em;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  h5 {
+    font-size: 1.1em;
+  }
+
+
+  .jumbotron {
+	margin: 0px;
+	max-height: 50px;
+	
+}
+}
+

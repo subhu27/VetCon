@@ -16,51 +16,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();  ?>/assets/front/style.css">
  
 
 </head>
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <div class="col-md-3">
-              <img src="img/logo.jpg">
-            </div>
-            <div class="col-md-3">
-              <a href="index.html"><h1>Vetcon</h1></a>
-            </div>
-              <div class="col-md-6" action="" method="post" role="form">
-                    <input type="text" name="ID" class="form-control" id="ID" placeholder="Your ID" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                    <input type="text" class="form-control" name="password" id="password" placeholder="Your Password" data-rule="minlen:8" data-msg="Please enter a valid password" />
-                    <div class="validation"></div>
-                    <button type="button" class="btn btn-default">Login</button>
-              </div>
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-          </div>
+<header class="col col-lg-* col-md-* col-sm-*" id="toShow">
 
-          <div class="navbar-collapse collapse">
-            <div class="menu">
-              <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation"><a href="#home" class="active">Home</a></li>
-                <li role="presentation"><a href="#about">About Us</a></li>
-                <li role="presentation"><a href="#services">Services</a></li>
-								<li role="presentation"><a href="#doctors">Doctors</a></li>
-                <li role="presentation"><a href="#contact">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+	<div class="container-fluid">
+		
+		<div class="jumbotron">
+  			<h5 class="display-6" align="center">Nepal Veterinary Consultancy</h5>
+		</div>
+
+	</div>
+	
+
+	<div class="container-fluid">
+			<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light" id="navigation">
+			   <a class="navbar-brand" href="#">
+			    <img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
+			  </a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Features</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Pricing</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
+	</div>
+
+
+</header>
+
+
+		
