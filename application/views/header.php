@@ -23,20 +23,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<header class="col col-lg-* col-md-* col-sm-*" id="toShow">
+<header class="col col-lg-12 col-md-12 col-sm-12" id="toShow">
 
 	<div class="container-fluid">
-		
 		<div class="jumbotron">
-  			<h5 class="display-6" align="center">Nepal Veterinary Consultancy</h5>
+	  		<h5 class="display-6" align="center">Nepal Veterinary Consultancy</h5>
 		</div>
-
 	</div>
 	
 
 	<div class="container-fluid">
-			<nav class="navbar sticky-top navbar-expand-md navbar-light bg-light" id="navigation">
-			   <a class="navbar-brand" href="#">
+			<nav class="navbar sticky-top navbar-expand-md navs">
+			   <a class="navbar-brand" href="<?php echo base_url();?>">
 			    <img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
 			  </a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,16 +43,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			  <div class="collapse navbar-collapse" id="navbarNav">
 			    <ul class="navbar-nav">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="<?php echo base_url();?>">Home <span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Features</a>
+			        <a class="nav-link" href="<?php echo base_url();?>#about">About Us</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="#">Pricing</a>
+			        <a class="nav-link" href="<?php echo base_url();?>#services">Services</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+			        <a class="nav-link" href="<?php echo base_url();?>#doctors">Doctors</a>
+			      </li>
+			       <li class="nav-item">
+			        <a class="nav-link" href="<?php echo base_url();?>#contact">Contact Us</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Staff Login</a>
 			      </li>
 			    </ul>
 			  </div>

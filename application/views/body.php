@@ -4,51 +4,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 
 
+<!-- span class / spacer class to manage the div going underneath the header -->
 
+<div class="fixingHeader" id="fixHeader"></div>
 
 <!-- this is the body of the landing page -->
 
-  <div id="home">
-    <div class="slider">
-      <div class="">
-        <div id="about-slider">
-          <div id="carousel-slider" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators visible-xs">
-              <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-slider" data-slide-to="1"></li>
-              <li data-target="#carousel-slider" data-slide-to="2"></li>
-            </ol>
-
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="img/3.jpg" class="img-responsive" alt="">
-              </div>
-              <div class="item">
-                <img src="img/3.jpg" class="img-responsive" alt="">
-              </div>
-              <div class="item">
-                <img src="img/3.jpg" class="img-responsive" alt="">
-              </div>
-            </div>
-
-            <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
-							<i class="fa fa-angle-left"></i>
-						</a>
-
-            <a class=" right carousel-control hidden-xs" href="#carousel-slider" data-slide="next">
-							<i class="fa fa-angle-right"></i>
-						</a>
-          </div>
-          <!--/#carousel-slider-->
-        </div>
-        <!--/#about-slider-->
-      </div>
-    </div>
+<div class="container-fluid">
+  		<div class="slider" id="home">
+		    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img class="d-block w-80" src="<?php echo base_url(); ?>/assets/images/img1.jpg" alt="First slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="<?php echo base_url(); ?>/assets/images/img2.jpg" alt="Second slide">
+		    </div>
+		    <div class="carousel-item">
+		      <img class="d-block w-100" src="<?php echo base_url(); ?>/assets/images/img1.jpg" alt="Third slide">
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+		</div>
   </div>
 
   <section id="about">
-    <div class="container">
+    <div class="container-fluid">
       <div class="center">
         <div class="col-md-12">
           <h2>About Us</h2>
@@ -59,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 
-        <div class="container">
+        <div class="container-fluid">
           <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
             <img src="<?php echo base_url('views/img/about/about1.jpg'); ?> ">
           </div>
@@ -76,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!--/#about-->
 
   <div id="services">
-    <div class="container">
+    <div class="container-fluid">
       <div class="center">
         <div class="col-md-6 col-md-offset-3">
           <h2>Our services</h2>
@@ -85,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="text-center">
         <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
           <img src="img/service/Vaccination.jpg">
@@ -107,7 +101,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
   <div id="doctors">
-    <div class="container">
+    <div class="container-fluid">
       <div class="center">
         <div class="col-md-6 col-md-offset-3">
           <h2>Our Doctors</h2>
@@ -117,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="text-center">
         <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
           <img src="img/services/services1.png">
@@ -139,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
   <div id="contact">
-    <div class="container">
+    <div class="container-fluid">
       <div class="col-lg-7">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
@@ -189,7 +183,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
   <footer>
-    <div class="container">
+    <div class="container-fluid">
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
         <h4>Contact Us</h4>
         <div class="contact-info">

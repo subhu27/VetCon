@@ -12,6 +12,11 @@ class Front extends CI_Controller {
 		$this->load->view('body');
 		$this->load->view('footer');
 	}
+
+	public function aboutUs(){
+		echo index()."#about";
+	}
+
 }
 
 ?>
