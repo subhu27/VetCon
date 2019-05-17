@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container-fluid">
 			<nav class="navbar sticky-top navbar-expand-md navs">
 			   <a class="navbar-brand" href="<?php echo base_url();?>">
-			    <img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
+			    <img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top navBrand" alt="logo">
 			  </a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
@@ -57,8 +57,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			       <li class="nav-item">
 			        <a class="nav-link" href="<?php echo base_url();?>#contact">Contact Us</a>
 			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="#">Staff Login</a>
+			      <li class="nav-item" id="staffLogin">
+			        <a class="nav-link" href="#"> <button class="btn btn-danger"> Staff Login </button> </a>
 			      </li>
 			    </ul>
 			  </div>
