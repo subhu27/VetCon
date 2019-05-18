@@ -9,9 +9,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container-fluid">
     	<div class="footer">
 	      <div class="col-md-12">
-	        <li><i class="fa fa-home fa"></i> Ratnanagar-2, Chitwan, Nepal</li>
-	        <li><i class="fa fa-phone fa"></i> +38 000 129900</li>
-	        <li><i class="fa fa-envelope fa"></i> drnimeshkhanal@gmail.com</li>
+	      	<ul>
+		        <li><i class="fa fa-home fa"></i> Ratnanagar-2, Chitwan, Nepal</li>
+		        <li><i class="fa fa-phone fa"></i> +38 000 129900</li>
+		        <li><i class="fa fa-envelope fa"></i> drnimeshkhanal@gmail.com</li>
+	        </ul>
 	        <hr>
 	        <p>&copy All rights reserved at Nepal Veterinary Consultancy Pvt. Ltd. , <?php echo date("Y"); ?> </p>
 

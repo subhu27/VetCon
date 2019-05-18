@@ -42,16 +42,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 
   <section id="about">
-    <div class="container-fluid">
-      <div class="center">
-        <div class="col-md-12">
-          <h5>About Us</h5>
-          <hr>
-          <p class="col-md-12">Nepal Veterinary Consultancy resides in that part of the country that shares the 80% production of chicken live stock and egg production, while the area also serves a quarter in milk production to the nation. This truly means, Vetcon has more opportunities then any other veterinary organization in the nation. The young team of our client has the clear vision to over take any other veterinary clinics not only in the area but aim to spread over the country.</p>
+    <div class="row">
+      <div class="container-fluid">
+        <div class="center">
+          <div class="col-md-12">
+            <h5>About Us</h5>
+            <hr>
+            <p class="col-md-12">Nepal Veterinary Consultancy resides in that part of the country that shares the 80% production of chicken live stock and egg production, while the area also serves a quarter in milk production to the nation. This truly means, Vetcon has more opportunities then any other veterinary organization in the nation. The young team of our client has the clear vision to over take any other veterinary clinics not only in the area but aim to spread over the country.</p>
+          </div>
         </div>
+      </div>
+    </div>
   </section>
   <!--/#about-->
   <section id="services">
+    <div class="row">
     <div class="container-fluid">
       <div class="center">
         <div class="col-md-12">
@@ -61,6 +66,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
     </div>
+    </div>
+    <div class="row">
     <div class="container-fluid">
       <div class="text-center">
         <div class="col-md-12">
@@ -87,23 +94,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
     </div>
+  </div>
   </section>
 
-  <div id="doctors">
-    <div class="container-fluid">
-      <div class="center">
-        <div class="col-md-12">
-          <h5>Doctors</h5>
-          <hr>
-          <p class="lead text-center">Our doctors are experienced, skilled and reliable</p>
+  <section id="doctors">
+    <div class="row">
+      <div class="container-fluid">
+        <div class="center">
+          <div class="col-md-12">
+            <h5>Doctors</h5>
+            <hr>
+            <p class="lead text-center">Our doctors are experienced, skilled and reliable</p>
+          </div>
         </div>
       </div>
     </div>
 
+    <div class="row">
     <div class="container-fluid">
       <div class="col-md-12">
       <div class="text-center">
-        <div class="row">
+      <div class="row">
         <div class="col-md-3">
           <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drNimesh.jpg">
           <h6>Dr. Nimesh Khanal</h6>
@@ -123,39 +134,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
       </div>
       </div>
+      </div>
     </div>
-    <hr>
     </div>
-  </div>
+  </section>
 
   <section id="contact">
-    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-12">
-          <h5 > Contact Us </h5>
+        <div class="container-fluid">
+          <div class="col-md-12">
+            <h5 > Contact Us </h5>
+            <hr>
+          </div>
         </div>
-      </div>
+      </div>  
       <div class="row">
-        <div class="col-md-6">
-          <h6> Follow our route </h6>
+        <div class="container-fluid">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="text-center"> Follow our route </h6>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.0108817093205!2d84.50653971401826!3d27.624179635751098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994ef5973e3b033%3A0x8ec03ff2052c1a1b!2z4KSo4KWH4KSq4KS-4KSyIOCkquCktuClgSDgpJrgpL_gpJXgpL_gpKTgpY3gpLjgpL4g4KSq4KSw4KS-4KSu4KSw4KWN4KS2!5e0!3m2!1sne!2sau!4v1558103090733!5m2!1sne!2sau" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3535.0108817093205!2d84.50653971401826!3d27.624179635751098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994ef5973e3b033%3A0x8ec03ff2052c1a1b!2z4KSo4KWH4KSq4KS-4KSyIOCkquCktuClgSDgpJrgpL_gpJXgpL_gpKTgpY3gpLjgpL4g4KSq4KSw4KS-4KSu4KSw4KWN4KS2!5e0!3m2!1sne!2sau!4v1558103090733!5m2!1sne!2sau" width="100%" height="550" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-        </div>
+              </div>
 
-        <span class="col-md-1"></span>
+              <span class="col-md-1"></span>
 
-        <div class="col-md-5"> 
-          <h6> Message Us </h6>
-          <p>Please tell us your requires, we will respond you soon.</p>
-
-          <div class="row">
-              <div id="sendmessage">Your message has been sent. Thank you!</div>
-              <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
-                <div class="form-group">
-                  <label for="name">Your Name * </label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+              <div class="col-md-5"> 
+                <h6 class="text-center"> Message Us </h6>
+                <p>Please tell us your requires, we will respond you soon.</p>
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+                <form action="" method="post" role="form" class="contactForm">
+                  <div class="form-group">
+                    <label for="name">Your Name * </label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
@@ -177,13 +191,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <button type="submit" class="btn btnMsg">Send</button>
               </form>
-            </div>
-            <!--/.row-->
           </div>
         </div>
         <hr>
-
-        </div>
+      </div>
+    </div>
   </section>
     
 
