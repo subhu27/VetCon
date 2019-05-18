@@ -45,6 +45,17 @@
 	
 }
 
+.login-page, .register-page{
+	margin-top: 200px;
+	z-index:9; 
+}
+
+.buttons{
+	width: 100%;
+}
+
+
+
 
 #about{
 	z-index: 16;
@@ -67,11 +78,37 @@
 
 }
 
-.btnMsg{
+.btnMsg, .btn-login{
 	background-color: #f4d942;
+	width: 100%;
+	height: 40px;
+	margin: 5px;
+	margin-bottom: 10px;
+	padding: 5px;
+
+}
+
+.btnMsg:hover, .btn-login:hover{
+	color:#0fa870;
+	text-decoration: none;
+	background-color: #f4ee42b3
+}
+
+.btn-login a{
+	color:#0fa870;
+	text-decoration: none;
+}
+
+.btn, .btn:hover{
+	color: #0fa870;
+}
+
+.btnStfLogin{
+	color: #f4d942; !important
 }
 
 .footer {
+	z-index: 1;
 	background-color: #f4d942; 
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
@@ -123,6 +160,10 @@ hr {
 
 	p {
 	font-size: 0.6em;
+}
+
+.copyright {
+	font-size: 0.8em;
 }
 
 }
