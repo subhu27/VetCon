@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		        <li><i class="fa fa-envelope fa"></i> drnimeshkhanal@gmail.com</li>
 	        </ul>
 	        <hr>
-	        <p>&copy All rights reserved at Nepal Veterinary Consultancy Pvt. Ltd. , <?php echo date("Y"); ?> </p>
+	        <p class="copyright text-center">&copy All rights reserved at Nepal Veterinary Consultancy Pvt. Ltd. , <?php echo date("Y"); ?> </p>
 
 	       </div>
       	</div>

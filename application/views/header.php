@@ -23,46 +23,56 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <body>
 
-<header class="col col-lg-12 col-md-12 col-sm-12" id="toShow">
-
-	<div class="container-fluid">
-		<div class="jumbotron">
-	  		<h5 class="display-6" align="center">Nepal Veterinary Consultancy</h5>
+<header class="col col-lg-12 col-md-12 col-sm-12"id="toShow">
+	<div class="row">
+		<div class="container-fluid">
+			<div class="jumbotron">
+				<div class="col-md-12 col-sm-12">
+			  		<h5 class="display-6" align="center">Nepal Veterinary Consultancy</h5>
+				</div>
+			</div>
 		</div>
 	</div>
 	
 
-	<div class="container-fluid">
+	<div class="row">
+		<div class="container-fluid">
 			<nav class="navbar sticky-top navbar-expand-md navs">
-			   <a class="navbar-brand" href="<?php echo base_url();?>">
-			    <img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top navBrand" alt="logo">
-			  </a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			    <span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarNav">
-			    <ul class="navbar-nav">
-			      <li class="nav-item active">
-			        <a class="nav-link" href="<?php echo base_url();?>">Home <span class="sr-only">(current)</span></a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="<?php echo base_url();?>#about">About Us</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="<?php echo base_url();?>#services">Services</a>
-			      </li>
-			      <li class="nav-item">
-			        <a class="nav-link" href="<?php echo base_url();?>#doctors">Doctors</a>
-			      </li>
-			       <li class="nav-item">
-			        <a class="nav-link" href="<?php echo base_url();?>#contact">Contact Us</a>
-			      </li>
-			      <li class="nav-item" id="staffLogin">
-			        <a class="nav-link" href="#"> <button class="btn btn-danger"> Staff Login </button> </a>
-			      </li>
-			    </ul>
-			  </div>
-			</nav>
+				
+					<a class="navbar-brand" href="<?php echo base_url();?>">
+						<img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top navBrand" alt="logo">
+					</a>
+				  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				    	<span class="navbar-toggler-icon"></span>
+				  	</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+				    	<ul class="navbar-nav">
+				      		<li class="nav-item active">
+				        		<a class="nav-link" href="<?php echo base_url();?>">Home <span class="sr-only">(current)</span></a>
+				      		</li>
+				      		<li class="nav-item">
+				        		<a class="nav-link" href="<?php echo base_url();?>#about">About Us</a>
+				      		</li>
+				      		<li class="nav-item">
+				        		<a class="nav-link" href="<?php echo base_url();?>#services">Services</a>
+				      		</li>
+				      		<li class="nav-item">
+				        		<a class="nav-link" href="<?php echo base_url();?>#doctors">Doctors</a>
+				      		</li>
+				       		<li class="nav-item">
+				        		<a class="nav-link" href="<?php echo base_url();?>#contact">Contact Us</a>
+				      		</li>
+				      		<li class="nav-item" id="staffLogin">
+				        		<a class="nav-link" href="<?php echo site_url("login");?>"> 
+				        			<button class="btn btn-danger btnStfLogin"> Staff Login </button> 
+				        		</a>
+				      		</li>
+				    	</ul>
+				    </div>
+				  </nav>
+				</div>
+			</div>
+		</div>
 	</div>
 
 

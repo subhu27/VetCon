@@ -163,7 +163,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               <div class="col-md-5"> 
                 <h6 class="text-center"> Message Us </h6>
-                <p>Please tell us your requires, we will respond you soon.</p>
+                <h6>Please tell us your requires, we will respond you soon.</h6>
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
                 <form action="" method="post" role="form" class="contactForm">
