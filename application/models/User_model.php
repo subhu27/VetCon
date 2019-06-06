@@ -3,6 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User_model extends CI_Model {
 
+
+		public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('User_model');
+        $this->load->helper('url_helper');
+        }
+
 	
 	public function index()
 	{
@@ -25,8 +33,22 @@ class User_model extends CI_Model {
 	    );
 
 	    return $this->db->insert('vuser', $data);
+	}
 
-}
+	public function login_check($email, $pass)
+	{
+	    $this->db->where('vuser_email', $email);
+	    $this->db->where('vuser_password', $pass);
+	    $query = $this->db->get('vuser');
+	    return $query;
+	    /*
+	    if($query->num_rows = 1)
+	    {
+	        return $query->row();
+	    }
+	    return $query=;
+		*/
+	}
 
 
 }
