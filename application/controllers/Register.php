@@ -26,27 +26,8 @@ class Register extends CI_Controller {
 
 	{
 		 
-
-    	$this->form_validation->set_rules('phone', 'Title', 'required|');
-    	$this->form_validation->set_rules('text', 'Text', 'required');
-    	$this->form_validation->set_rules('title', 'Title', 'required');
-    	$this->form_validation->set_rules('text', 'Text', 'required');
-
-
-    	if ($this->form_validation->run() === FALSE)
-    	{
-        	$this->load->view('templates/header', $data);
-        	$this->load->view('news/create');
-        	$this->load->view('templates/footer');
-
-
-    //}
-   // else
-    //{
-    $this->User_model->register();
-        //$this->load->view('/success');
-    //}
-
+    	$this->User_model->register();
+       
 	}
 
 

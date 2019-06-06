@@ -81,6 +81,10 @@
 
 }
 
+a {
+	color:#0fa870; 
+}
+
 .btnMsg:hover, .btn-login:hover{
 	color:#0fa870;
 	text-decoration: none;

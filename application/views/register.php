@@ -20,6 +20,7 @@
                       <?php echo validation_errors(); ?>
 
                       <?php echo form_open('register/register_user'); ?>
+                      <form method="post">
                         <div class="form-group name">
                           <label for="firstName">First Name</label>
                           <input type="text" name="firstName" class="form-control" id="firstName" aria-describedby="firstNameHelp" placeholder="Enter First Name">

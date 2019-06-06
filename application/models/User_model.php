@@ -32,7 +32,10 @@ class User_model extends CI_Model {
 	        'vuser_password' => $pwd
 	    );
 
-	    return $this->db->insert('vuser', $data);
+	    $this->db->insert('vuser', $data);
+	    if ($this->db->affected_rows()==1) {
+	    	return redirect('Login');
+	    }
 	}
 
 	public function login_check($email, $pass)
