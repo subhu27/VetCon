@@ -63,8 +63,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				        		<a class="nav-link" href="<?php echo base_url();?>#contact">Contact Us</a>
 				      		</li>
 				      		<li class="nav-item" id="staffLogin">
-				        		<a class="nav-link" href="<?php echo site_url("login");?>"> 
-				        			<button class="btn btn-danger btnStfLogin"> Staff Login </button> 
+				        		<a class="nav-link" href="
+					        		<?php 
+					        		$logged_in = $this->session->userdata('is_logged_in'); 
+					        		$username = $this->session->userdata('userFname');
+
+					        		if($logged_in==TRUE)
+					        		{
+					        		  	echo site_url("Login/logout");
+					        		
+					        		}
+					        		else{
+					        			echo site_url("Login");
+					        		}
+					        		?> 
+				        		"> 
+				        			<?php 
+				        					$btn_class = "btn btn-danger";
+
+				        					if($logged_in==TRUE) {
+				        						echo "<button class=\"".$btn_class."\"> Logout </button>";
+
+				        					}
+				        					else{
+				        						echo "<button class=\"".$btn_class."\"> Staff Login </button>";
+
+				        					}
+				        			?>
 				        		</a>
 				      		</li>
 				    	</ul>

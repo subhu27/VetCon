@@ -27,6 +27,7 @@ class Login extends CI_Controller {
 
 	public function user_check()
 	{
+		//$user_access == 1;
 		$logged_in = $this->session->userdata('is_logged_in');
 		if($logged_in!= TRUE);
 	    {
@@ -66,7 +67,8 @@ class Login extends CI_Controller {
 //on click logouts the user and redirects to the login page
 
 			public function logout(){
-
+					$unset_data = array('is_logged_in', 'userEmail', 'userFname');
+					$this->session->unset_userdata($unset_data);
 					$this->session->sess_destroy();
 					redirect('Login');
 			}

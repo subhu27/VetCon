@@ -11,7 +11,8 @@ class User_model extends CI_Model {
         $this->load->helper('url_helper');
         }
 
-	
+//default function to load at the first when the controller is called
+
 	public function index()
 	{
 
@@ -20,6 +21,8 @@ class User_model extends CI_Model {
 		$this->load->view('register');
 		$this->load->view('footer');
 	}
+
+//function to register the users (takes input from the register form)
 
 	public function register()
 	{
@@ -38,19 +41,16 @@ class User_model extends CI_Model {
 	    }
 	}
 
+//checks whether the user is valid or not, is called from Login/user_check with the parameters -- email and password of the users 
+
 	public function login_check($email, $pass)
 	{
+	    $user_access = 1;
 	    $this->db->where('vuser_email', $email);
 	    $this->db->where('vuser_password', $pass);
+	    //$this->db->where('vuser_access',$user_access) // user access not working
 	    $query = $this->db->get('vuser');
 	    return $query;
-	    /*
-	    if($query->num_rows = 1)
-	    {
-	        return $query->row();
-	    }
-	    return $query=;
-		*/
 	}
 
 

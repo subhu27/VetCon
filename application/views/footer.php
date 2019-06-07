@@ -16,6 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	        </ul>
 	        <hr>
 	        <p class="copyright text-center">&copy All rights reserved at Nepal Veterinary Consultancy Pvt. Ltd. , <?php echo date("Y"); ?> </p>
+	        <br>
 
 	       </div>
       	</div>
