@@ -50,10 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <h6 class="text-center"> Welcome, <?php echo $this->session->userdata('userFname');?></h6>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-link"> Welcome, <?php echo $this->session->userdata('userFname');?> </li>
+            <li class="nav-link">  </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Front');?>"> Website </a>
             </li>
