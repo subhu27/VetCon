@@ -45,12 +45,20 @@ class User_model extends CI_Model {
 
 	public function login_check($email, $pass)
 	{
-	    $user_access = 1;
+	    //$user_access = 1;
 	    $this->db->where('vuser_email', $email);
 	    $this->db->where('vuser_password', $pass);
 	    //$this->db->where('vuser_access',$user_access) // user access not working
 	    $query = $this->db->get('vuser');
 	    return $query;
+	}
+
+
+//function to select the list of the users
+
+	public function display_users(){
+		$query = $this->db->get('vuser');
+		return $query->result();
 	}
 
 
