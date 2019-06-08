@@ -17,14 +17,20 @@
               <div class="row">
                     <span class="col-md-3"></span>
                     <div class="col-md-6">
-                      <form>
+                      <?php echo validation_errors(); ?>
+
+                      <?php echo form_open('Login/user_check'); ?>
+                      <form method="post">
                         <div class="form-group">
                           <label for="email">Email address</label>
-                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
+                         <input type="email" pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b" name="emailL" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                         </div>
+
+                   
+
                         <div class="form-group">
                           <label for="password">Password</label>
-                          <input type="password" class="form-control" id="password" placeholder="Password">
+                          <input type="password" name="passwordL" class="form-control" id="password" placeholder="Password" required>
                         </div>
                         <div class="buttons">
                           <button class="btn btn-login" type="submit">Staff - Login</button>
