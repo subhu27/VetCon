@@ -62,6 +62,25 @@ class User_model extends CI_Model {
 	}
 
 
+//function to retrieve user details for editing
+	public function find_user($vuser_email){
+
+
+
+
+$data=$this->db-> select (['vuser_fname','vuser_lname'])
+
+         -> where ('vuser_email',$vuser_email)
+
+         ->get('vuser');
+    
+
+         return $data->row();
+
+
+	}
+
+
 }
 
 ?>
