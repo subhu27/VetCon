@@ -23,10 +23,13 @@
       	<tr>
       		<th scope="row"><?php echo $i; ?></th>
       		<td><?php $userFname = $row->vuser_fname; $userLname = $row->vuser_lname; $name = $userFname." ".$userLname; echo $name;?></td>
+
+
       		<td><?php echo $row->vuser_email;?></td>
       		<td><?php echo $row->vuser_phone;?></td>
       		<td><?php echo $row->vuser_access; $i=$i+1;?> </td>
-      		<td><button class="btn btn-success"> Edit </button> <button class="btn btn-danger"> Delete </button><br> </td>  
+          
+      		<td><a href="<?php echo ("Users/edituser/{$row->vuser_email}" ) ?>"> <button class="btn btn-success" >  Edit </button></a> <button class="btn btn-danger"> Delete </button><br> </td>  
 
 
       	</tr>
