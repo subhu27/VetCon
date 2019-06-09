@@ -48,7 +48,6 @@ class User_model extends CI_Model {
 	    //$user_access = 1;
 	    $this->db->where('vuser_email', $email);
 	    $this->db->where('vuser_password', $pass);
-	    //$this->db->where('vuser_access',$user_access) // user access not working
 	    $query = $this->db->get('vuser');
 	    return $query;
 	}
@@ -59,25 +58,6 @@ class User_model extends CI_Model {
 	public function display_users(){
 		$query = $this->db->get('vuser');
 		return $query->result();
-	}
-
-
-//function to retrieve user details for editing
-	public function find_user($vuser_email){
-
-
-
-
-$data=$this->db-> select (['vuser_fname','vuser_lname'])
-
-         -> where ('vuser_email',$vuser_email)
-
-         ->get('vuser');
-    
-
-         return $data->row();
-
-
 	}
 
 

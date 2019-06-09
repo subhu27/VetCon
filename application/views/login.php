@@ -22,8 +22,8 @@
                       <?php echo form_open('Login/user_check'); ?>
                       <form method="post">
                         <div class="form-group">
-                          <label for="email">Email address</label>
-                         <input type="email" name="emailL" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label for="email">Email address</label>
+                        <input type="email" name="emailL" class="form-control" value="<?php echo set_value('emailL');?>" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 
 
                         </div>
@@ -38,6 +38,7 @@
                           </button>
                         </div>
                       </form>
+                      <? echo form_close(); ?>
 
                     </div>
                     <span class="col-md-3"></span>
