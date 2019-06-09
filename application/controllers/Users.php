@@ -55,19 +55,39 @@ class Users extends CI_Controller {
 /*edit user details */
     public function edituser($vuser_email){
 
-     
-$this->load->model('User_model');
-$haha=$this->User_model->find_user($vuser_email);
+    
+                      $this->load->view('backend/backend_header_sidebar');
+                      $this->load->view('backend/backend_footer');
+                      $this->load->model('User_model');
+                      $edit=$this->User_model->find_user($vuser_email);
 
-$this->load->view('edit_user');
+                      $this->load->view('edit_user',['user'=>$edit]);
 
     }
 
 
+/*update users */    	
 
-    	
+
+public function updateuser(){
+
+     
+        $this->load->model('User_model');
+        
+
+        if($this->User_model->update_user()){
 
 
+            
+        }   else {
+
+
+        }
+
+
+
+
+    }
 
 
 
