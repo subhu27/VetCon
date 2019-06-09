@@ -50,6 +50,21 @@ class Users extends CI_Controller {
 
     	
     }
+
+
+/*edit user details */
+    public function edituser($vuser_email){
+
+     
+$this->load->model('User_model');
+$haha=$this->User_model->find_user($vuser_email);
+
+$this->load->view('edit_user');
+
+    }
+
+
+
     	
 
 
