@@ -15,6 +15,7 @@ class Users extends CI_Controller {
     }
 
 
+//reterieves the users from the database and passes to the 'users' view
 
     public function index(){
 
@@ -25,7 +26,50 @@ class Users extends CI_Controller {
 
     	
     }
+
+    public function edit_user_handler($vuser_email){
+
+    	$this->load->view('backend/backend_header_sidebar');
+    	/*$this->load->view('backend/edit_user');*/
+    	$this->load->view('backend/backend_footer');
+
+    	 $this->load->model('User_model');
+         $edit=$this->User_model->find_user($vuser_email);
+         $this->load->view('backend/edit_user',['user'=>$edit]);
+    }
     	
+    public function update_user($email)
+    {
+
+    	$this->load->model('User_model');
+    	//$email = $this->input->post('email');
+    	$result = $this->User_model->update_user_data($email);
+    	//var_dump($result);
+    	if ($result===TRUE) {
+    		echo "from if";
+    		return redirect('Users');
+    	}
+    	else{
+    		$this->load->view('backend/backend_header_sidebar');
+    		$this->load->model('User_model');
+         $edit = $this->User_model->find_user($email);
+         $this->load->view('backend/edit_user',['user'=>$edit]);
+    	/*$this->load->view('backend/edit_user');*/
+    	$this->load->view('backend/backend_footer');
+
+    	 
+    	}
+    }
+
+    public function delete_user_handler($email){
+
+    	//$this->load->model('')
+    	$delete = $this->User_model->delete_user($email);
+
+    }
+
+
+}
 
 
 
@@ -34,5 +78,3 @@ class Users extends CI_Controller {
 
 
 //end of the class 
-
-}

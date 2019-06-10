@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Register extends CI_Controller {
 
+// restrecting the user from direct access to the admin panel controller
 
 	public function __construct()
     {
@@ -25,7 +26,7 @@ class Register extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-
+// validates and registers the user
 	public function register_user()
 
 	{
@@ -50,36 +51,6 @@ class Register extends CI_Controller {
 	     	
 
 	     }
-		/*
-
-
-		 $this->load->helper('form');
-    $this->load->library('form_validation');
-
-    $data['title'] = 'Create a news item';
-
-    $this->form_validation->set_rules('title', 'Title', 'required');
-    $this->form_validation->set_rules('text', 'Text', 'required');
-
-    if ($this->form_validation->run() === FALSE)
-    {
-        $this->load->view('templates/header', $data);
-        $this->load->view('news/create');
-        $this->load->view('templates/footer');
-
-    }
-    else
-    {
-        $this->news_model->set_news();
-        $this->load->view('news/success');
-
-		*/
-
-
-
-
-		 
-    	//$this->User_model->register();
        
 	}
 

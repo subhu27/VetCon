@@ -28,7 +28,7 @@ class Login extends CI_Controller {
 	public function user_check()
 	{
 //checks if the user is logged in or not
-
+	//$user_access = "1";
 	$logged_in = $this->session->userdata('is_logged_in');
 		if($logged_in!= TRUE);
 	    {
