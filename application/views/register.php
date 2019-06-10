@@ -80,7 +80,7 @@
                           <button class="btn btn-login" type="submit">Staff - Register</button>
                         <!-- Login Button-->
                           <button class="btn btn-login"> 
-                            <a href="<?php echo site_url('login');?>">Staff - Login</a>
+                            <a href="<?php echo site_url('Login');?>">Staff - Login</a>
                           </button>
                         </div>
                       <? echo form_close(); ?>

@@ -42,9 +42,7 @@ class Users extends CI_Controller {
     {
 
     	$this->load->model('User_model');
-    	//$email = $this->input->post('email');
     	$result = $this->User_model->update_user_data($email);
-    	//var_dump($result);
     	if ($result===TRUE) {
     		echo "from if";
     		return redirect('Users');
@@ -52,10 +50,9 @@ class Users extends CI_Controller {
     	else{
     		$this->load->view('backend/backend_header_sidebar');
     		$this->load->model('User_model');
-         $edit = $this->User_model->find_user($email);
-         $this->load->view('backend/edit_user',['user'=>$edit]);
-    	/*$this->load->view('backend/edit_user');*/
-    	$this->load->view('backend/backend_footer');
+         	$edit = $this->User_model->find_user($email);
+         	$this->load->view('backend/edit_user',['user'=>$edit]);
+    		$this->load->view('backend/backend_footer');
 
     	 
     	}

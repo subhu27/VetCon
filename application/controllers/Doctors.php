@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Doctors extends CI_Controller {
 
 
 	public function __construct()
@@ -18,9 +18,9 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->helper('url');
+		$result_rows['query']= $this->User_model->display_doctors();
 		$this->load->view('backend/backend_header_sidebar');
-		$this->load->view('backend/doctors');
+		$this->load->view('backend/doctors', $result_rows);
 		$this->load->view('backend/backend_footer');
 	}
 

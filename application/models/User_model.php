@@ -54,6 +54,16 @@ class User_model extends CI_Model {
 	    return $query;
 	}
 
+//function to select the list doctors
+
+	public function display_doctors(){
+		$select = "Doctor";
+		$this->db->where('vuser_post',$select);
+		$query = $this->db->get('vuser');
+		return $query->result();
+	}
+
+
 
 //function to select the list of the users
 
@@ -81,7 +91,6 @@ class User_model extends CI_Model {
 	        'vsuer_tole' => $this->input->post('tole'),
 	        'vuser_address' => $this->input->post('address')
 	    );
-	    var_dump($data);
 
 	    $this->db->where('vuser_email',$email);
 	    $this->db->update('vuser',$data);

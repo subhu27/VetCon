@@ -34,7 +34,7 @@
                         <div class="buttons">
                           <button class="btn btn-login" type="submit">Staff - Login</button>
                           <button class="btn btn-login"> 
-                            <a href="<?php echo site_url("register");?>">Staff - Register</a>
+                            <a href="<?php echo site_url("Register");?>">Staff - Register</a>
                           </button>
                         </div>
                       </form>
