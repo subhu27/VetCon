@@ -28,13 +28,13 @@ class Login extends CI_Controller {
 	public function user_check()
 	{
 //checks if the user is logged in or not
-	//$user_access = "1";
+	$user_access = 1;
 	$logged_in = $this->session->userdata('is_logged_in');
 		if($logged_in!= TRUE);
 	    {
 	        $email  =   $this->input->post('emailL');
 	        $pass  =   md5($this->input->post('passwordL'));
-	        $return =   $this->User_model->login_check($email, $pass); 
+	        $return =   $this->User_model->login_check($email, $pass, $user_access); 
 	        if(isset($return)){
 	        	if($return->num_rows = 1){
 	        		$return_row = $return->row();

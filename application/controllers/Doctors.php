@@ -25,6 +25,15 @@ class Doctors extends CI_Controller {
 	}
 
 
+	public function addDoctor()
+	{
+		$this->load->view('backend/backend_header_sidebar');
+		$this->load->view('backend/addDoctor');
+		$this->load->view('backend/backend_footer');
+
+	}
+
+
 }
 
 ?>

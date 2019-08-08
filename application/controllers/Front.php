@@ -6,7 +6,7 @@ class Front extends CI_Controller {
 		public function __construct()
     {
         parent::__construct();
-        $this->load->model('User_model');
+        //$this->load->model('User_model');
     }
 
 	
@@ -17,10 +17,6 @@ class Front extends CI_Controller {
 		$this->load->view('header');
 		$this->load->view('body');
 		$this->load->view('footer');
-	}
-
-	public function aboutUs(){
-		echo index()."#about";
 	}
 
 }
