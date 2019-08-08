@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 					        		if($logged_in==TRUE)
 					        		{
-					        		  	echo site_url("Login/logout");
+					        		  	echo site_url("Dashboard");
 					        		
 					        		}
 					        		else{
@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				        					$btn_class = "btn btn-danger";
 
 				        					if($logged_in==TRUE) {
-				        						echo "<button class=\"".$btn_class."\"> Logout </button>";
+				        						echo "<button class=\"".$btn_class."\"> Admin </button>";
 
 				        					}
 				        					else{
