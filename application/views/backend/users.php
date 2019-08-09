@@ -33,7 +33,7 @@
       			</button>  
       			<button class="btn btn-danger"> 
       				<a href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" > Delete 
-      				</a> </button><br> </td>  
+      				</a> </button> <br> </td>  
 
 
       	</tr>

@@ -76,19 +76,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-md-3">
             <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/vacc.jpg">
             <h6>Vaccination</h6>
-            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+            <p>Our doctors and technician team are well equipped and trained to perform the vaccination.</p>
           </div>
           <span class="col-md-1"></span>
           <div class="col-md-3">
             <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/treatment.jpg">
             <h6>Farm Visit</h6>
-            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+            <p>Nepal Veterinary Consultancy's doctors visits the farm which gives the farm owner leverage to fix the issues in the farm that may lead to the mortality of the birds / animals reared.
+            </p>
           </div>
           <span class="col-md-1"></span>
           <div class="col-md-3">
             <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/surgery.jpg">
             <h6>Post-mortem</h6>
-            <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+            <p>NVC is equipped with a very advance instruments in the lab to perform the culture test and post-mortem giving our clients quick diagnosis and prescription.</p>
           </div>
         </div> 
         </div>

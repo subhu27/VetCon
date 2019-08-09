@@ -44,7 +44,10 @@ class Users extends CI_Controller {
     	$this->load->model('User_model');
     	$result = $this->User_model->update_user_data($email);
     	if ($result===TRUE) {
-    		echo "from if";
+            if ($controllerClass ==="Doctors") {
+                return redirect('Doctors');
+            }
+            echo $controllerClass;
     		return redirect('Users');
     	}
     	else{

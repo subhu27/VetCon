@@ -1,21 +1,22 @@
  <div class="container-fluid">
-        <h1 class="mt-4"> Doctors</h1>
-       
-      </div>
+
+
+      <h1 class="mt-4"> Doctors</h1>
 
 
       <div>   
 
-      	 <table class="table table-stripped">
-      	<thead>
-      		<tr>
-		      	<th scope="col">#</th>
-		      	<th scope="col">Name</th>
-		      	<th scope="col">Email</th>
-		      	<th scope="col">Phone</th>
-		      	<th scope="col">Description</th>
-	      	</tr>
-      	</thead>
+      	<table class="table table-stripped">
+        	<thead>
+        		<tr>
+  		      	<th scope="col">#</th>
+  		      	<th scope="col">Name</th>
+  		      	<th scope="col">Email</th>
+  		      	<th scope="col">Phone</th>
+  		      	<th scope="col">Description</th>
+              <th scope="col"> Action </th>
+  	      	</tr>
+        	</thead>
       	
       	<?php $i=1; foreach($query as $row): ?>
       	<tr>
@@ -26,14 +27,24 @@
           <td><?php echo $row->vuser_description;?></td>
       		<td><?php $i=$i+1;?> </td>
       		<td> 
-	    <?php endforeach;?>
+
+            <button class="btn btn-success">
+              <a href="<?php echo ("Users/edit_user_handler/{$row->vuser_email}") ?>" > Edit 
+              </a> 
+            </button>  
+            <button class="btn btn-danger"> 
+              <a href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" > Delete 
+              </a> 
+            </button> <br> 
+          </td> 
+
+
+          <?php endforeach;?>
+        </tr>
 
 
       </table>
-
-
-      </div>
      
     <!-- /#page-content-wrapper -->
-
-  </div>
+    </div>
+</div>

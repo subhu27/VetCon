@@ -25,11 +25,16 @@ class Doctors extends CI_Controller {
 	}
 
 
-	public function addDoctor()
+	public function editDoctor()
 	{
 		$this->load->view('backend/backend_header_sidebar');
-		$this->load->view('backend/addDoctor');
-		$this->load->view('backend/backend_footer');
+    	/*$this->load->view('backend/edit_user');*/
+    	$this->load->view('backend/backend_footer');
+
+    	 $this->load->model('User_model');
+         $edit=$this->User_model->find_user($vuser_email);
+         $controllerClass = "Doctors";
+         $this->load->view('backend/edit_user',['user'=>$edit], $controllerClass);
 
 	}
 
