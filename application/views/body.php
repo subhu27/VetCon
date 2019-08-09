@@ -116,11 +116,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="col-md-12">
       <div class="text-center">
       <div class="row">
+        
+        <?php
+        foreach ($query as $row) {
+        ?>
+
         <div class="col-md-3">
           <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drNimesh.jpg">
-          <h6>Dr. Nimesh Khanal</h6>
-          <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
+          <h6> Dr. <?php echo $row->vuser_fname." ".$row->vuser_lname; ?></h6>
+          <p> <?php echo $row->vuser_description;  ?> </p>
         </div>
+        <span class="col-md-1"></span>
+
+      <?php } ?>
+
+        <!-- 
         <span class="col-md-1"></span>
         <div class="col-md-3">
           <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drSulav.jpg">
@@ -133,6 +143,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <h6>Dr. Sonam Bhandari</h6>
           <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
         </div>
+
+      -->
       </div>
       </div>
       </div>
