@@ -133,13 +133,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- 
         <span class="col-md-1"></span>
         <div class="col-md-3">
-          <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drSulav.jpg">
+          <img class="img-fluid" src="<?php //echo base_url(); ?>/assets/images/drSulav.jpg">
           <h6>Dr. Sulav Raj Thapaliya</h6>
           <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
         </div>
         <span class="col-md-1"></span>
         <div class="col-md-3">
-          <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drSonam.jpg">
+          <img class="img-fluid" src="<?php //echo base_url(); ?>/assets/images/drSonam.jpg">
           <h6>Dr. Sonam Bhandari</h6>
           <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
         </div>

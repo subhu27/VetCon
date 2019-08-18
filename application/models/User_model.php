@@ -43,12 +43,12 @@ class User_model extends CI_Model {
 
 //checks whether the user is valid or not, is called from Login/user_check with the parameters -- email and password of the users 
 
-	public function login_check($email, $pass)
+	public function login_check($email, $pass, $user_access)
 	{
-	    //$user_access = 1;
+	    $user_access = 1;
 	    $this->db->where('vuser_email', $email);
 	    $this->db->where('vuser_password', $pass);
-	    //$this->db->where('vuser_access', $user_access);      
+	    $this->db->where('vuser_access', $user_access);      
 	    //to restrict unauthorised user
 	    $query = $this->db->get('vuser');
 	    return $query;
@@ -68,7 +68,9 @@ class User_model extends CI_Model {
 //function to select the list of the users
 
 	public function display_users(){
-		$query = $this->db->get('vuser');
+		$this->db->from('vuser');
+		$this->db->order_by('vuser_fname','asc');
+		$query = $this->db->get();
 		return $query->result();
 	}
 

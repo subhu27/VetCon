@@ -39,14 +39,12 @@ class Register extends CI_Controller {
 	        $this->load->view('register');
 	        $this->load->view('footer');
 	     }
-	     else{
+	    else{
 	     	$this->User_model->register();
             $this->load->view('header');
             $this->load->view('login');
             $this->load->view('footer');
-	     	
-
-	     }
+	    }
        
 	}
 
