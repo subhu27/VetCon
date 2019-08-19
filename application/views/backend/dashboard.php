@@ -20,7 +20,7 @@
         </div>
         <div class="col-md-2">
         	
-        	<a href=""> <button class="btn btn-success"> New Farm </button> </a>
+        	<a href="<?php echo ("Farm") ?>"> <button class="btn btn-success"> New Farm </button> </a>
         </div>
        
       </div>

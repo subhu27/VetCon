@@ -22,10 +22,11 @@ class Client_model extends CI_Model
 	        'vclient_email' => $this->input->post('cEmail'),
 	        'vclient_description' => $this->input->post('cDescription'),
 	        'vclient_address' => $this->input->post('cAddress'),
-	        'vclient_tole' => $this->input->post('cTole')
+	        'vclient_tole' => $this->input->post('cTole'),
+	        'vFarm_vfarm_id' => $this->input->post('cFarm'),
 	    );
 
-	    $this->db->insert('vuser', $data);
+	    $this->db->insert('vclient', $data);
 	    if ($this->db->affected_rows()==1) {
 	    	return redirect('Login');
 	    }

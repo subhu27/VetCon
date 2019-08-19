@@ -62,12 +62,14 @@
 
      <div class="form-group">
                           <label for="post"> Farm </label>
-                          <select name="post" class="dropdown">
+                          <select name="cFarm" class="dropdown">
                             <option value="<?php ?>"> Select Farm</option>
 
                             <?php foreach ($query as $farm) 
                             {
-                                echo '<option value="'.$farm->vfarm_name.'  '.$farm->vfarm_address.'  '.$farm->vfarm_tole.'">'.$farm->vfarm_id.' '.$farm->vfarm_name.'</option>';
+                                //echo '<option value="'.$farm->$vfarm_id.'</option>';
+                                echo '<option value="'.$farm->vfarm_id.' * '.'">'.' * '.$farm->vfarm_id.' * '.'</option>';
+                                //echo '<option value="'.'*'.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'">'.' * '.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'</option>';
                             } ?>
                           </select>
                         </div>

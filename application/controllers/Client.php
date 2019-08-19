@@ -34,6 +34,8 @@ class Client extends CI_Controller {
 	    	$this->form_validation->set_rules('cLName', 'Last Name', 'trim|required');
 	    	$this->form_validation->set_rules('cEmail', 'Email', 'trim|is_unique[vClient.vclient_email]');
 	    	$this->form_validation->set_rules('cPhone', 'Phone Number', 'trim|required|integer|max_length[10]|min_length[10]');
+	    	$this->form_validation->set_rules('cFarm', 'Farm Name', 'trim|required');
+
 	    	if ($this->form_validation->run() === FALSE)
 	    	{
 	            $this->index();
@@ -41,9 +43,7 @@ class Client extends CI_Controller {
 		     else{
 		     	$this->Client_model->register();
 	            $this->index();
-	     	
-
-	     }
+	             }
     	}
 }
 
