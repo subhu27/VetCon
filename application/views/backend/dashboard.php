@@ -16,7 +16,7 @@
         </div>
         <div class="col-md-2">
         	
-        	<a href=""> <button class="btn btn-success"> New Batch </button> </a>
+        	<a href="<?php echo ("Batch") ?>"> <button class="btn btn-success"> New Batch </button> </a>
         </div>
         <div class="col-md-2">
         	

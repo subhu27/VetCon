@@ -60,7 +60,7 @@
 
     </div>
 
-     <div class="form-group">
+    <div class="form-group">
                           <label for="post"> Farm </label>
                           <select name="cFarm" class="dropdown">
                             <option value="<?php ?>"> Select Farm</option>
@@ -72,7 +72,7 @@
                                 //echo '<option value="'.'*'.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'">'.' * '.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'</option>';
                             } ?>
                           </select>
-                        </div>
+    </div>
 
 
     <a href="<?php echo site_url("Client/addClient"); ?>"> <button type="submit" class="btn btn-primary"> Next </button>  </a>
