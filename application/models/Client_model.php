@@ -31,6 +31,16 @@ class Client_model extends CI_Model
 	    	return redirect('Login');
 	    }
         }
+
+
+        public function getClient()
+        {
+        	$this->db->from('vclient');
+        	$this->db->order_by('vclient_fname','asc');
+        	$query = $this->db->get();
+        	return $query->result();
+
+        }
 }
 
 ?>

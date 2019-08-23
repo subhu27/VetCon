@@ -87,6 +87,7 @@ class User_model extends CI_Model {
 	    $data = array(
 	        'vuser_fname' => $this->input->post('firstName'),
 	        'vuser_lname' => $this->input->post('lastName'),
+	        'vuser_phone' => $this->input->post('phone'),
 	        'vuser_post' => $this->input->post('post'),
 	        'vuser_access' => $this->input->post('access'),
 	        'vuser_description' => $this->input->post('desc'),
