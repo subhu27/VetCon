@@ -27,29 +27,29 @@ class Case_model extends CI_Model
 
        public function register()
        {
-
-       	$date = date('d-m-y');
-       	var_dump($date);
-       	var_dump($time);
-       	$time = time('h-m-s');
-       	var_dump($time);
-       	$s=$time%(60*60);
-       	var_dump($s);
+       	//$time= time('h-m-s');
+       	$date = time();
        	  $data = array(
        	  	'vcase_date' => $date,
-       	  	'vcase_time' => $time,
 	        'vcase_description' => $this->input->post('caDescription'),
 	        'vcase_symptoms' => $this->input->post('caSymptoms'),
 	        'vcase_diagnosis' => $this->input->post('caDiagnosis'),
 	        'vcase_prescription' => $this->input->post('caPrescription'),
-	        'vClient_vclient_phone' => $this->input->post('caClient')
+	        'vClient_vclient_id' => $this->input->post('caClient')
 	    );
-       	  $client = $this->input->post('caClient');
-       	  var_dump($client);
+       	  //$client = $this->input->post('caClient');
+       	  //var_dump($client);
 
 	    $this->db->insert('vcase', $data);
 	    if ($this->db->affected_rows()==1) {
+	    	$id = $this->db->insert_id();
+	    	$data  = array(
+	    		'vCase_vcase_id' => $id,
+	    		'vDisease_vdisease_id' => $this->input->post('caDisease')
+	    	);
+	    	$this->db->insert('vcase_has_vdisease', $data);
 	    	return redirect('Login');
+
 	    }
 
        }

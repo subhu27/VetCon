@@ -29,6 +29,16 @@ class Disease_model extends CI_Model
 
        }
 
+
+
+       public function getDisease()
+       {
+       	$this->db->from('vdisease');
+		$this->db->order_by('vdisease_name','asc');
+		$query = $this->db->get();
+		return $query->result();
+       }
+
 }
 
 
