@@ -41,6 +41,18 @@ class Client_model extends CI_Model
         	return $query->result();
 
         }
+
+
+        public function getClientDetails()
+        {
+        	$this->db->select('*');
+        	$this->db->from('vclient');
+        	$this->db->join('vfarm','vfarm.vfarm_id = vclient.vFarm_vfarm_id');
+        	$this->db->order_by('vclient_fname','asc');
+        	$query = $this->db->get();
+        	return $query->result();
+
+        }
 }
 
 ?>

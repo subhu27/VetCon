@@ -13,9 +13,11 @@ class Case_model extends CI_Model
         }
 
 
-        public function getFarm()
+        public function getCaseDetails()
         {
+        $this->db->select(*);
         $this->db->from('vcase');
+        ->join()
 		$this->db->order_by('vcase_time','asc');
 		$query = $this->db->get();
 		return $query->result();

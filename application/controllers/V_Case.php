@@ -49,6 +49,15 @@ class V_Case extends CI_Controller {
 	            $this->index();
 	             }
     	}
+
+
+    	public function displayCase()
+    	{
+    		$result_rows['query'] = $this->Case_model->getCaseDetails();
+    		$this->load->view('backend/backend_header_sidebar');
+    		$this->load->view('backend/cases', $result_rows);
+    		$this->load->view('backend/backend_footer');
+    	}
 }
 
 

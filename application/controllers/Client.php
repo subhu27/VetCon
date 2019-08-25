@@ -45,6 +45,25 @@ class Client extends CI_Controller {
 	            $this->index();
 	             }
     	}
+
+
+    	public function displayClients()
+    	{
+	    	$clientView['query'] = $this->Client_model->getClientDetails();
+	    	$this->load->view('backend/backend_header_sidebar');
+	    	$this->load->view('backend/client',$clientView);
+	    	$this->load->view('backend/backend_footer');
+
+    	}
+
+    	public function editClient()
+    	{
+    		$clientView['query'] = $this->Client_model->getClientDetails();
+	    	$this->load->view('backend/backend_header_sidebar');
+	    	$this->load->view('backend/client',$clientView);
+	    	$this->load->view('backend/backend_footer');
+	    	
+    	}
 }
 
 
