@@ -24,6 +24,14 @@ class Disease extends CI_Controller {
 
     	}
 
+    	public function display()
+    	{
+    		$result_rows['query'] = $this->Disease_model->getDisease();
+    		$this->load->view('backend/backend_header_sidebar');
+	    	$this->load->view('backend/disease',$result_rows);
+	    	$this->load->view('backend/backend_footer');
+    	}
+
     	public function addDisease()
     	{
 	    	$this->load->library('form_validation');
@@ -40,6 +48,44 @@ class Disease extends CI_Controller {
 	            $this->index();
 	             }
     	}
+
+
+
+    	public function editDisease($disease_id)
+    	{
+
+    	$this->load->view('backend/backend_header_sidebar');
+    	/*$this->load->view('backend/edit_user');*/
+    	
+    	$this->load->view('backend/backend_footer');
+    	$this->load->model('Disease_model');
+         $edit=$this->Disease_model->findDisease($disease_id);
+         $this->load->view('backend/editDisease',['disease'=>$edit]);
+
+    	}
+    	
+    public function updateDisease($disease_id)
+    {
+
+    	$this->load->model('Disease_model');
+    	$result = $this->Disease_model->updateDisease($disease_id);
+    	if ($result===TRUE) {
+    		return redirect('Disease/display');
+    	}
+    	else{
+    		$this->editDisease($disease_id);
+
+    	 
+    	}
+    }
+
+    public function deleteDisease($disease_id){
+
+    	//$this->load->model('')
+    	$delete = $this->Disease_model->deleteDisease($disease_id);
+
+	}
+
 }
 
 
