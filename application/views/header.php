@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					        		?> 
 				        		"> 
 				        			<?php 
-				        					$btn_class = "btn btn-danger";
+				        					$btn_class = "btn btn-primary";
 
 				        					if($logged_in==TRUE) {
 				        						echo "<button class=\"".$btn_class."\"> Admin </button>";

@@ -56,13 +56,29 @@ class Client extends CI_Controller {
 
     	}
 
-    	public function editClient()
+    	public function editClient($client_id)
     	{
-    		$clientView['query'] = $this->Client_model->getClientDetails();
+    		$clientView['result'] = $this->Client_model->findClient($client_id);
+    		$farmViews['farmView'] = $this->Farm_model->getFarm();
+    		$data = array_merge($clientView+$farmViews);
 	    	$this->load->view('backend/backend_header_sidebar');
-	    	$this->load->view('backend/client',$clientView);
+	    	$this->load->view('backend/editClient',$data);
 	    	$this->load->view('backend/backend_footer');
-	    	
+
+    	}
+
+
+    	public function updateClient($client_id)
+    	{
+    		$result = $this->Client_model->updateClient($client_id);
+    		if ($result===TRUE) {
+    			return redirect('Client/displayClients');
+    	}
+    		else{
+    			$this->editClient($client_id);
+
+    	 
+    	}
     	}
 }
 

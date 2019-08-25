@@ -34,7 +34,7 @@ class Doctors extends CI_Controller {
     	 $this->load->model('User_model');
          $edit=$this->User_model->find_user($vuser_email);
          $controllerClass = "Doctors";
-         $this->load->view('backend/edit_user',['user'=>$edit], $controllerClass);
+         $this->load->view('backend/edit_user',['user'=>$edit]);
 
 	}
 
