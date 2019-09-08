@@ -2,27 +2,21 @@
       <div class="container-fluid">
         <h1 class="mt-4">VetCon Stat</h1>
 
-        <div class="col-md-2">
-        	
-        	<a href="<?php echo ("Client"); ?>"> <button class="btn btn-success"> New Client </button> </a>
-        </div>
-        <div class="col-md-2">
-        	
-        	<a href="<?php echo ("V_Case"); ?>"> <button class="btn btn-success"> New Case </button> </a>
-        </div>
-        <div class="col-md-2">
-        	
-        	<a href="<?php echo ("Disease"); ?>"> <button class="btn btn-success"> New Disease </button> </a>
-        </div>
-        <div class="col-md-2">
-        	
-        	<a href="<?php echo ("Batch"); ?>"> <button class="btn btn-success"> New Batch </button> </a>
-        </div>
-        <div class="col-md-2">
-        	
-        	<a href="<?php echo ("Farm"); ?>"> <button class="btn btn-success"> New Farm </button> </a>
-        </div>
-       
+     <div class="col-xs-6" >
+
+            <div class="row, text-left">
+
+              <a href="<?php echo ("Client") ?>"class="btn btn-success"> New Client </button> </a>
+
+              <a href="<?php echo ("V_Case") ?>" class="btn btn-success"> New Case  </a>
+
+              <a href="<?php echo ("Disease") ?>" class="btn btn-success"> New Disease  </a>
+
+              <a href="<?php echo ("Batch") ?>"class="btn btn-success"> New Batch  </a>
+
+              <a href="<?php echo ("Farm") ?>" class="btn btn-success"> New Farm  </a>
+
+          </div>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
