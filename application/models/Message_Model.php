@@ -24,7 +24,10 @@ class Message_model extends CI_Model
 
 	    $this->db->insert('vmessage', $data);
 	    if ($this->db->affected_rows()==1) {
-	    	return redirect('Front');
+	    	return TRUE;
+	    }
+	    else{
+	    	return FALSE;
 	    }
         }
 

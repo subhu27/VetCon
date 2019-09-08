@@ -129,22 +129,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <span class="col-md-1"></span>
 
       <?php } ?>
-
-        <!-- 
-        <span class="col-md-1"></span>
-        <div class="col-md-3">
-          <img class="img-fluid" src="<?php //echo base_url(); ?>/assets/images/drSulav.jpg">
-          <h6>Dr. Sulav Raj Thapaliya</h6>
-          <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-        </div>
-        <span class="col-md-1"></span>
-        <div class="col-md-3">
-          <img class="img-fluid" src="<?php //echo base_url(); ?>/assets/images/drSonam.jpg">
-          <h6>Dr. Sonam Bhandari</h6>
-          <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-        </div>
-
-      -->
       </div>
       </div>
       </div>
@@ -176,33 +160,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="col-md-5"> 
                 <h6 class="text-center"> Message Us </h6>
                 <h6>Please tell us your requires, we will respond you soon.</h6>
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-                <form action="<?php echo site_url('Message/addMessage')?>" method="post" role="form" class="contactForm">
+                <div id="sendmessage">
+                  
+                  <p class="text-success text-center">
+                  <?php echo $this->session->flashdata('contactUs');?>
+                
+                  </p>
+
+
+                </div>
+
+                <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
+
+                <?php echo form_open('Message/addMessage'); ?>
+
+
+                <form method="post" role="form" class="contactForm">
                   <div class="form-group">
                     <label for="name">Your Name * </label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
+                    <?php  echo form_error('name'); ?>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" value="<?php echo set_value('name');?>" />
+
                 </div>
                 <div class="form-group">
                   <label for="phone">Your Phone * </label>
-                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="phone" data-msg="Please enter a valid phone number" />
-                  <div class="validation"></div>
+                  <?php  echo form_error('phone'); ?>
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone"  value="<?php echo set_value('phone');?>" />
                 </div>
                 <div class="form-group">
                   <label for="subject">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
+                  <?php  echo form_error('subject'); ?>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value="<?php echo set_value('subject');?>" />
+
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea class="form-control" name="message" rows="5" data-msg="Please write something for us"></textarea>
-                  <div class="validation"></div>
+                  <?php  echo form_error('message'); ?>
+                  <textarea class="form-control" name="message" value="<?php echo set_value('message');?>"></textarea>
+                  
                   <i>* - required</i>
                 </div>
 
                 <button type="submit" class="btn btnMsg">Send</button>
               </form>
+              <? echo form_close(); ?>
           </div>
         </div>
         <hr>
