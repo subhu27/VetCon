@@ -17,19 +17,20 @@
               <div class="row">
                     <span class="col-md-3"></span>
                     <div class="col-md-6">
-                      <?php echo validation_errors(); 
-                      //echo $errors; ?>
+                      <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
 
                       <?php echo form_open('Login/validateLogin'); ?>
                       <form method="post">
                         <div class="form-group">
                         <label for="email">Email address</label>
+                        <?php  echo form_error('emailL'); ?>
                         <input type="email" name="emailL" class="form-control" value="<?php echo set_value('emailL');?>" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 
 
                         </div>
                         <div class="form-group">
                           <label for="password">Password</label>
+                          <?php  echo form_error('passwordL'); ?>
                           <input type="password" name="passwordL" class="form-control" id="password" placeholder="Password">
                         </div>
                         <div class="buttons">

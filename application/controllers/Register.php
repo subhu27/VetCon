@@ -9,6 +9,7 @@ class Register extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('User_model');
+        $this->load->library('form_validation');
     }
 
 
@@ -26,7 +27,6 @@ class Register extends CI_Controller {
 	public function register_user()
 
 	{
-		$this->load->library('form_validation');
 		$this->form_validation->set_rules('firstName', 'First Name', 'trim|required');
     	$this->form_validation->set_rules('lastName', 'Last Name', 'trim|required');
     	$this->form_validation->set_rules('email', 'Email', 'trim|required|is_unique[vuser.vuser_email]');

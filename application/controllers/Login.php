@@ -12,6 +12,7 @@ class Login extends CI_Controller {
         $this->load->model('User_model');
         $this->load->helper('url_helper');
         $this->load->library('User_Handler');
+        $this->load->library('form_validation');
         //$logged_in = $this->session->userdata('is_logged_in');
     }
 
@@ -34,7 +35,6 @@ class Login extends CI_Controller {
 
 	//checks whether the user is valid or not
 	public function validateLogin(){
-		$this->load->library('form_validation');
 		$this->form_validation->set_rules('emailL', 'Email', 'trim|required');
 
 		//calls the function selfValidateLogin (callback_selfValidateLogin) for validating wrong username, password
