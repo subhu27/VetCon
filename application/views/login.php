@@ -1,3 +1,5 @@
+
+
 <section class="login" id="loginpg">
   <div class="row">
     <div class="container-fluid">
@@ -6,6 +8,13 @@
             <div class="form ">
               <h4 class="text-center">Staff Login</h4>
             </div>
+            <div>
+              <p class="text-success text-center">
+                <?php echo $this->session->flashdata('register');?>
+                
+              </p>
+            </div>
+
         </div>
       </div>
     </div>

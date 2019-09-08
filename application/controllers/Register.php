@@ -36,15 +36,10 @@ class Register extends CI_Controller {
     	$this->form_validation->set_message('is_unique','The user is already registered. Please, use other email to register.');
     	if ($this->form_validation->run() === FALSE)
     	{
-            $this->load->view('header');
-	        $this->load->view('register');
-	        $this->load->view('footer');
-	     }
+            $this->index();	     }
 	    else{
-	     	$this->User_model->register();
-            $this->load->view('header');
-            $this->load->view('login');
-            $this->load->view('footer');
+	    	$this->session->set_flashdata('register','Registration Successfull !! You can now, Login !!');
+	     	return redirect('Login');
 	    }
        
 	}

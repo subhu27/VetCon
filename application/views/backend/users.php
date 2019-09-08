@@ -1,6 +1,11 @@
 
       <div class="container-fluid">
         <h1 class="mt-4"> Users</h1>
+        <p class="text-success text-center">
+                <?php echo $this->session->flashdata('userUpdate');?>
+                
+              </p>
+
        
       </div>
 

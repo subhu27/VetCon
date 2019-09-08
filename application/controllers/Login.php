@@ -23,7 +23,7 @@ class Login extends CI_Controller {
 	{
 		$logged_in = $this->session->userdata('is_logged_in');
 		if ($logged_in!=TRUE) {
-
+		
 			$this->load->view('header');
 			$this->load->view('login');
 			$this->load->view('footer');
