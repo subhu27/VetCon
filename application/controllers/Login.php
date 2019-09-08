@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	protected $logged_in;
+	//protected $logged_in;
 
 	public function __construct()
     {
@@ -12,8 +12,7 @@ class Login extends CI_Controller {
         $this->load->model('User_model');
         $this->load->helper('url_helper');
         $this->load->library('User_Handler');
-        $logged_in = $this->session->userdata('is_logged_in');
-        //$this->load->library('User_Handler');
+        //$logged_in = $this->session->userdata('is_logged_in');
     }
 
 
@@ -37,6 +36,8 @@ class Login extends CI_Controller {
 	public function validateLogin(){
 		$this->load->library('form_validation');
 		$this->form_validation->set_rules('emailL', 'Email', 'trim|required');
+
+		//calls the function selfValidateLogin (callback_selfValidateLogin) for validating wrong username, password
     	$this->form_validation->set_rules('passwordL', 'Password', 'callback_selfValidateLogin|trim|required'
         );
 
@@ -50,10 +51,9 @@ class Login extends CI_Controller {
 
 
 	public function selfValidateLogin(){
+		//validates the user inputs checking the database (Also for handling exception)
 		$check = $this->User_model->validateLoginM();
 		if ($check=== TRUE) {
-			echo "<br> here at true selfValidateLogin";
-			var_dump($check);
 			return TRUE;
 		}
 		else{
@@ -84,7 +84,6 @@ class Login extends CI_Controller {
 	        	// checks if the value we get is returned with only one row
 
 	        	if($return->num_rows = 1){
-	        		echo "is am here at user_email check";
 	        		$return_row = $return->row();
 	        		//checks if the row with the key is set or not
 	        		if (isset($return_row->vuser_email)) {

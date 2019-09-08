@@ -33,6 +33,7 @@ class Register extends CI_Controller {
     	$this->form_validation->set_rules('phoneNumber', 'Phone Number', 'trim|required|integer|max_length[10]|min_length[10]');
     	$this->form_validation->set_rules('password', 'Password', 'trim|required|matches[conf_password]');
     	$this->form_validation->set_rules('conf_password', 'Confirm Password', 'trim|required');
+    	$this->form_validation->set_message('is_unique','The user is already registered. Please, use other email to register.');
     	if ($this->form_validation->run() === FALSE)
     	{
             $this->load->view('header');
