@@ -50,7 +50,7 @@ class Case_model extends CI_Model
 	    		'vDisease_vdisease_id' => $this->input->post('caDisease')
 	    	);
 	    	$this->db->insert('vcase_has_vdisease', $data);
-	    	return redirect('Login');
+	    	return redirect('V_Case/displayCase');
 
 	    }
 

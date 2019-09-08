@@ -26,7 +26,7 @@
 
 <!-- -------------------------------------------First Name field----------------------------------->
 
-                           <div class="form-group email">
+                           <div class="form-group">
                           <label for="firstName"> First Name </label>
                            <?php //echo validation_errors('email'); ?>
                           <input type="text" name="firstName" class="form-control" value="<?php echo set_value('firstName',$user->vuser_fname);?>" id="firstName" aria-describedby="emailHelp" placeholder="Enter First Name">
@@ -35,10 +35,19 @@
 
 <!-- -------------------------------------------Last Name field----------------------------------->
 
-                         <div class="form-group email">
+                         <div class="form-group">
                           <label for="lastName"> Last Name </label>
-                           <?php //echo validation_errors('email'); ?>
+                           <?php ?>
                           <input type="text" name="lastName" class="form-control" value="<?php echo set_value('lastName',$user->vuser_lname);?>" id="lastName" aria-describedby="emailHelp" placeholder="Enter First Name">
+                          <br>
+
+
+
+
+                          <div class="form-group">
+                          <label for="phone"> Phone </label>
+                           <?php ?>
+                          <input type="tel" name="phone" class="form-control" value="<?php echo set_value('phone',$user->vuser_phone);?>" id="phone" aria-describedby="emailHelp" placeholder="Enter Phone Number" pattern="[0-9]{10}" >
                           <br>
                          
 <!---------------------------------------------Post of the user---------------------------------------->
@@ -47,8 +56,9 @@
                           <label for="post">Post</label>
                           <select name="post" class="dropdown">
                             <option value="<?php echo set_value('post',$user->vuser_post);?>">Choose the post</option>
-                            <option>Doctor</option>
                             <option>Admin</option>
+                            <option>Doctor</option>
+                            <option>Super Admin</option>
                           </select>
                         </div>
                         <br>
@@ -91,8 +101,9 @@
                         <div class="form-group email">
                           <label for="description">Describe User</label>
                            <?php //echo validation_errors('email'); ?>
-                          <input type="text" name="desc" class="form-control" value="<?php echo set_value('desc',$user->vuser_description);?>" id="address"  placeholder="Describe User">
-                          </input>
+                          <textarea type="text" name="desc" class="form-control" id="address"  placeholder="Describe User">
+                            <?php echo set_value('desc',$user->vuser_description);?>
+                          </textarea>
                           <br>
                                                   
                           

@@ -28,7 +28,7 @@ class Client_model extends CI_Model
 
 	    $this->db->insert('vclient', $data);
 	    if ($this->db->affected_rows()==1) {
-	    	return redirect('Login');
+	    	return redirect('Client/displayClients');
 	    }
         }
 

@@ -8,16 +8,15 @@ class Dashboard extends CI_Controller {
     {
        	parent::__construct();
        	$this->load->model('User_model');
-       	$user_status = $this->session->userdata('is_logged_in');
-       	if ($user_status == FALSE) {
-       		redirect('Login');
-       	}
+       	$this->load->library('User_Handler');
+
     }
 
 	
 	public function index()
 	{
 
+		//var_dump()
 		$this->load->helper('url');
 		$this->load->view('backend/backend_header_sidebar');
 		$this->load->view('backend/dashboard');

@@ -173,21 +173,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
 
               <span class="col-md-1"></span>
-
               <div class="col-md-5"> 
                 <h6 class="text-center"> Message Us </h6>
                 <h6>Please tell us your requires, we will respond you soon.</h6>
                 <div id="sendmessage">Your message has been sent. Thank you!</div>
                 <div id="errormessage"></div>
-                <form action="" method="post" role="form" class="contactForm">
+                <form action="<?php echo site_url('Message/addMessage')?>" method="post" role="form" class="contactForm">
                   <div class="form-group">
                     <label for="name">Your Name * </label>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
-                  <label for="email">Your Phone * </label>
-                  <input type="phone" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid phone number" />
+                  <label for="phone">Your Phone * </label>
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="phone" data-msg="Please enter a valid phone number" />
                   <div class="validation"></div>
                 </div>
                 <div class="form-group">
@@ -197,7 +196,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-msg="Please write something for us"></textarea>
                   <div class="validation"></div>
                   <i>* - required</i>
                 </div>

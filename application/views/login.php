@@ -17,9 +17,10 @@
               <div class="row">
                     <span class="col-md-3"></span>
                     <div class="col-md-6">
-                      <?php echo validation_errors(); ?>
+                      <?php echo validation_errors(); 
+                      //echo $errors; ?>
 
-                      <?php echo form_open('Login/user_check'); ?>
+                      <?php echo form_open('Login/validateLogin'); ?>
                       <form method="post">
                         <div class="form-group">
                         <label for="email">Email address</label>

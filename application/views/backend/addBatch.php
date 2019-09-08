@@ -52,21 +52,19 @@
   </div>
 
 <div class="form-row">
-     <div class="form-group col-md-6">
+     <div class="form-group col-md-4">
       <label for="bHeads"> Head Counts </label>
       <input type="number" class="form-control" id="bHeads" placeholder="Batch Head Counts" name="bHeads" min="1" <?php echo set_value('bHeads');?> >
     </div>
 
-     <div class="form-group col-md-6">
+     <div class="form-group col-md-8">
                           <label for="post"> Batch Farm </label> <br>
                           <select name="bFarm" class="dropdown">
                             <option value="<?php ?>"> Select Farm</option>
 
-                            <?php foreach ($query as $farm) 
+                           <?php foreach ($query as $farm) 
                             {
-                                //echo '<option value="'.$farm->$vfarm_id.'</option>';
-                                echo '<option value="'.$farm->vfarm_id.' * '.'">'.' * '.$farm->vfarm_id.' * '.'</option>';
-                                //echo '<option value="'.'*'.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'">'.' * '.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'</option>';
+                                echo '<option value="'.$farm->vfarm_id.'">'.' * '.$farm->vfarm_name.' * '.$farm->vfarm_address.' * '.$farm->vfarm_tole.'</option>';
                             } ?>
                           </select>
                         </div>
