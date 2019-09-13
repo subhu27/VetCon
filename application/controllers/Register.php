@@ -38,6 +38,7 @@ class Register extends CI_Controller {
     	{
             $this->index();	     }
 	    else{
+	    	$this->User_model->register();
 	    	$this->session->set_flashdata('register','Registration Successfull !! You can now, Login !!');
 	     	return redirect('Login');
 	    }

@@ -11,11 +11,10 @@ class Batch extends CI_Controller {
           $this->load->model('Farm_model');
       		$this->load->model('Client_model');
        		$this->load->model('User_model');
-       		$user_status = $this->session->userdata('is_logged_in');
-       		if ($user_status == FALSE) 
-       		{
-       			redirect('Login');
-       		}
+       		$userCheck = $this->user_handler->isSuperAdmin();
+        if ($userCheck === FALSE ) {
+          $this->user_handler->index();
+        }
     	}
 
     	public function index()

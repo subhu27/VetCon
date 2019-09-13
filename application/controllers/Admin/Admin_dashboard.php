@@ -1,16 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Dashboard extends CI_Controller {
+class Admin_dashboard extends CI_Controller {
 
 
 	public function __construct()
     {
        	parent::__construct();
        	$this->load->model('User_model');
-       	$this->load->library('User_Handler');
        	$this->load->helper('date');
-       	$userCheck = $this->user_handler->isSuperAdmin();
+       	$userCheck = $this->user_handler->isAdmin();
        	if ($userCheck === FALSE ) {
        		$this->user_handler->index();
        	}
@@ -45,9 +44,9 @@ class Dashboard extends CI_Controller {
 
 		//$data['time']=$timeNepal+$timeAus;
 		$this->load->helper('url');
-		$this->load->view('backend/backend_header_sidebar');
-		$this->load->view('backend/dashboard');
-		$this->load->view('backend/backend_footer');
+		$this->load->view('backend/admin/adminDashboardHeaderSidebar');
+		$this->load->view('backend/admin/adminDashboard');
+		$this->load->view('backend/admin/adminFooter');
 	}
 
 

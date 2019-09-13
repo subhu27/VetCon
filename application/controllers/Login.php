@@ -11,7 +11,7 @@ class Login extends CI_Controller {
         $this->load->library('session');
         $this->load->model('User_model');
         $this->load->helper('url_helper');
-        $this->load->library('User_Handler');
+        //$this->load->library('User_Handler');
         $this->load->library('form_validation');
         //$logged_in = $this->session->userdata('is_logged_in');
     }
@@ -100,7 +100,7 @@ class Login extends CI_Controller {
 							}
 					}
 					else{
-	        				redirect('Login');
+	        				return redirect('Login');
 	        			}
 	        	}
 	        			

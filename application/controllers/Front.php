@@ -8,6 +8,7 @@ class Front extends CI_Controller {
         parent::__construct();
         $this->load->helper('url');
         $this->load->library('form_validation');
+        $this->load->model('Message_model');
     }
 
 	
@@ -19,6 +20,24 @@ class Front extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+
+	public function addMessage()
+    	{
+			$this->form_validation->set_rules('name', 'Name', 'trim|required');
+	    	$this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric');
+	    	$this->form_validation->set_rules('subject', 'Subject', 'trim');
+	    	$this->form_validation->set_rules('message', 'Message', 'trim|required');
+
+	    	if ($this->form_validation->run() === TRUE)
+	    	{
+	            $message = $this->Message_model->addMessage();
+	            if ($message === TRUE) {
+	            	$this->session->set_flashdata('contactUs','Your message has been successfully sent, Cheers !!!');
+	            }
+		    }
+		    $this->index();
+
+    	}
 
 
 }

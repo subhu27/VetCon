@@ -8,10 +8,10 @@ class Doctors extends CI_Controller {
     {
        	parent::__construct();
        	$this->load->model('User_model');
-       	$user_status = $this->session->userdata('is_logged_in');
-       	if ($user_status == FALSE) {
-       		redirect('Login');
-       	}
+       	$userCheck = $this->user_handler->isSuperAdmin();
+        if ($userCheck === FALSE ) {
+          $this->user_handler->index();
+        }
     }
 
 	

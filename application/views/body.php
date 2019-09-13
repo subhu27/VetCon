@@ -172,7 +172,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
 
-                <?php echo form_open('Message/addMessage'); ?>
+                <?php echo form_open('Front/addMessage'); ?>
 
 
                 <form method="post" role="form" class="contactForm">
@@ -203,7 +203,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <button type="submit" class="btn btnMsg">Send</button>
               </form>
-              <? echo form_close(); ?>
+              <?php echo form_close(); ?>
           </div>
         </div>
         <hr>

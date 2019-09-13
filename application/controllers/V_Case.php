@@ -11,11 +11,10 @@ class V_Case extends CI_Controller {
        		$this->load->model('User_model');
        		$this->load->model('Case_model');
        		$this->load->model('Disease_model');
-       		$user_status = $this->session->userdata('is_logged_in');
-       		if ($user_status == FALSE) 
-       		{
-       			redirect('Login');
-       		}
+       		$userCheck = $this->user_handler->isSuperAdmin();
+        if ($userCheck === FALSE ) {
+          $this->user_handler->index();
+        }
     	}
 
     	public function index()
@@ -32,13 +31,13 @@ class V_Case extends CI_Controller {
 
     	public function addCase()
     	{
-	    	$this->load->library('form_validation');
-			$this->form_validation->set_rules('caDescription', 'Description', 'trim|required');
-	    	$this->form_validation->set_rules('caSymptoms', 'Symptoms', 'trim');
-	    	$this->form_validation->set_rules('caDiagnosis', 'Diagnosis', 'trim');
-	    	$this->form_validation->set_rules('caPrescription', 'Prescription', 'trim');
-	    	$this->form_validation->set_rules('caClient', 'Name of client','trim|required');
-	    	$this->form_validation->set_rules('caDisease','Name of disease','trim');
+	     $this->load->library('form_validation');
+			 $this->form_validation->set_rules('caDescription', 'Description', 'trim|required');
+	     $this->form_validation->set_rules('caSymptoms', 'Symptoms', 'trim');
+	     $this->form_validation->set_rules('caDiagnosis', 'Diagnosis', 'trim');
+	     $this->form_validation->set_rules('caPrescription', 'Prescription', 'trim');
+	     $this->form_validation->set_rules('caClient', 'Name of client','trim|required');
+	     $this->form_validation->set_rules('caDisease','Name of disease','trim');
 
 	    	if ($this->form_validation->run() === FALSE)
 	    	{

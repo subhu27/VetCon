@@ -17,6 +17,10 @@
               <a href="<?php echo ("Farm") ?>" class="btn btn-success"> New Farm  </a>
 
           </div>
+
+          <?php //echo $time;
+          //var_dump($data); ?>
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->

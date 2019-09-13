@@ -32,9 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="sidebar-heading"><?php echo  $this->session->userdata('userPost'); ?></div>
       <div class="list-group list-group-flush">
         <a href="<?php echo site_url('Dashboard');  ?>" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="<?php echo site_url('Users');  ?>" class="list-group-item list-group-item-action bg-light">Staff</a>
-        <a href="<?php echo site_url('Doctors');  ?>" class="list-group-item list-group-item-action bg-light">Doctors</a>
-        <a href="<?php echo site_url('Disease/display');  ?>" class="list-group-item list-group-item-action bg-light">Diseases</a>
+        <a href="<?php echo site_url('Admin/Profile/editUserProfile');  ?>" class="list-group-item list-group-item-action bg-light">My Profile</a>
+        <a href="<?php echo site_url('Admin/Profile/editUserProfile');  ?>" class="list-group-item list-group-item-action bg-light">Diseases</a>
         <a href="<?php echo site_url('Client/displayClients');  ?>" class="list-group-item list-group-item-action bg-light">Clients</a>
         <a href="<?php echo site_url('Cases');  ?>" class="list-group-item list-group-item-action bg-light">Cases</a>
         <a href="<?php echo site_url('Message');  ?>" class="list-group-item list-group-item-action bg-light">Messages</a>

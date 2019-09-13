@@ -9,10 +9,10 @@ class Users extends CI_Controller {
        	parent::__construct();
        	$this->load->model('User_model');
         $this->load->library('form_validation');
-       	$user_status = $this->session->userdata('is_logged_in');
-       	if ($user_status == FALSE) {
-       		redirect('Login');
-       	}
+       	$userCheck = $this->user_handler->isSuperAdmin();
+        if ($userCheck === FALSE ) {
+            $this->user_handler->index();
+        }
     }
 
 
@@ -46,7 +46,7 @@ class Users extends CI_Controller {
     	   $this->load->model('User_model');
     	   $result = $this->User_model->update_user_data($email);
     	   if ($result===TRUE) {
-                $message = $email.","." this user is edited successfully";
+                $message = $email.","." this user is updated successfully";
                 $this->session->set_flashdata('userUpdate',$message);
                 return redirect('Users');
             }
