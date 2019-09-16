@@ -28,14 +28,13 @@
       		<td><?php $i=$i+1;?> </td>
       		<td> 
 
-            <button class="btn btn-success">
-              <a href="<?php echo ("Users/edit_user_handler/{$row->vuser_email}") ?>" > Edit 
+           
+              <a href="<?php echo ("Users/edit_user_handler/{$row->vuser_email}") ?>" class="btn btn-success" > Edit 
               </a> 
-            </button>  
-            <button class="btn btn-danger"> 
-              <a href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" > Delete 
+            
+              <a href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" class="btn btn-danger"> Delete 
               </a> 
-            </button> <br> 
+           <br> 
           </td> 
 
 
