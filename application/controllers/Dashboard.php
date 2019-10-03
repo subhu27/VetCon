@@ -11,6 +11,7 @@ class Dashboard extends CI_Controller {
        	$this->load->library('User_Handler');
        	$this->load->helper('date');
        	$userCheck = $this->user_handler->isSuperAdmin();
+       	//var_dump($userCheck);
        	if ($userCheck === FALSE ) {
        		$this->user_handler->index();
        	}

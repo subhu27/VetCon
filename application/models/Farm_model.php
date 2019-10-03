@@ -41,6 +41,24 @@ class Farm_model extends CI_Model
 
        }
 
+
+       public function searchFarm($query)
+        {
+        $this->db->select('*');
+  		$this->db->from('vfarm');
+  		if($query != ''){	
+   			$this->db->like('vfarm_id', $query);
+   			$this->db->or_like('vfarm_name', $query);
+   			$this->db->or_like('vfarm_address', $query);
+   			$this->db->or_like('vfarm_tole', $query);
+   			$this->db->or_like('vfarm_estd', $query);
+  		}
+  		$this->db->order_by('vfarm_name', 'DESC');
+  		return $this->db->get();
+
+
+        }
+
 }
 
 

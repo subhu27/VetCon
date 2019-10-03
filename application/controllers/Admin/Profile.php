@@ -21,7 +21,7 @@ class Profile extends CI_Controller {
       $vuser_email = $this->session->userdata('userEmail');
       $this->load->view('backend/admin/adminDashboardHeaderSidebar');
       $edit=$this->User_model->find_user($vuser_email);
-      $this->load->view('backend/edit_user',['user'=>$edit]);
+      $this->load->view('backend/Admin/editAdminUser',['user'=>$edit]);
       $this->load->view('backend/admin/adminFooter');
       
       

@@ -4,8 +4,8 @@
       <div class="col-md-12">
           <div class="register-page">
             <div class="form ">
-              <h4 class="text-center">Edit Details for <?php 
-              echo $user->vuser_email;  ?></h4>
+              <h4 class="text-center">Edit Details for <?php
+              echo $this->session->userdata('userEmail');  ?></h4>
             </div>
         </div>
       </div>
@@ -51,32 +51,6 @@
                           <input type="tel" name="phone" class="form-control" value="<?php echo set_value('phone',$user->vuser_phone);?>" id="phone" aria-describedby="emailHelp" placeholder="Enter Phone Number" pattern="[0-9]{10}" >
                           <br>
                          
-<!---------------------------------------------Post of the user---------------------------------------->
-
-                        <div class="form-group">
-                          <label for="post">Post</label>
-                          <select name="post" class="dropdown">
-                            <?php echo form_error('post'); ?>
-                            <option value="<?php echo set_value('post',$user->vuser_post);?>">Choose the post</option>
-                            <option>Admin</option>
-                            <option>Doctor</option>
-                            <option>Super Admin</option>
-                          </select>
-                        </div>
-                        <br>
-                          
-<!-- ---------------------------Access status to the user ------------------------------------------------->
-                        <div class="form-group">
-                          <label for="access">Access</label>
-                          <?php echo form_error('access'); ?>
-                          <select name="access" class="dropdown">
-                            <option value="<?php echo set_value('access',$user->vuser_access);?>">Set Access</option>
-                            <option >0</option>
-                            <option>1</option>
-                          </select>
-                        </div>
-                        <br>
-
 <!--------------------------------Address of the user------------------------------------- -->
 
 

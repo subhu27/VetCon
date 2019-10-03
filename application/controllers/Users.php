@@ -3,13 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
+private $hello;// = "I am a public hellow";
+//echo $this->$hello;
 
 	public function __construct()
     {
+        //$params=$hello;
        	parent::__construct();
        	$this->load->model('User_model');
         $this->load->library('form_validation');
-       	$userCheck = $this->user_handler->isSuperAdmin();
+       	$userCheck = $this->user_handler->isAnyUser();
         if ($userCheck === FALSE ) {
             $this->user_handler->index();
         }
@@ -20,24 +23,68 @@ class Users extends CI_Controller {
 
     public function index(){
 
-    	$result_rows['query']= $this->User_model->display_users();
-    	$this->load->view('backend/backend_header_sidebar');
-    	$this->load->view('backend/users', $result_rows);
-    	$this->load->view('backend/backend_footer');
+        $userCheck = $this->user_handler->isSuperAdmin();
+        /*
+        *Only allows 'Super Admin' users to run the else statement otherwise redirects it to the respective dashboard view
+        this is essentail for using the code.
+        *
+        */
+        if ($userCheck === FALSE ) {
+            $this->user_handler->index();
+        }
+        else{
+            $result_rows['query']= $this->User_model->display_users();
+            $this->load->view('backend/backend_header_sidebar');
+            $this->load->view('backend/users', $result_rows);
+            $this->load->view('backend/backend_footer');
+            echo $this->hello."<br>";
+            $hello = "changing hello form index";
+            echo $hello;
+        }
 
     	
     }
 
     public function edit_user_handler($vuser_email){
-
-    	$this->load->view('backend/backend_header_sidebar');
-    	/*$this->load->view('backend/edit_user');*/
-    	$this->load->view('backend/backend_footer');
-
-    	 $this->load->model('User_model');
-         $edit=$this->User_model->find_user($vuser_email);
-         $this->load->view('backend/edit_user',['user'=>$edit]);
+        $hello = "changing from somewhere else";
+        $isSuperAdmin = $this->user_handler->isSuperAdmin();
+        if ($isSuperAdmin===TRUE) {
+            $edit=$this->User_model->find_user($vuser_email);
+            $this->editSuperAdminUser($edit);
+        }
+        else{
+            $vuser_email = $this->session->userdata('userEmail');
+            $edit=$this->User_model->find_user($vuser_email);
+            $this->editAdminOrDoctorUser($edit);
+        }
+         
     }
+
+    public function editSuperAdminUser($edit){
+        if ($this->user_handler->isSuperAdmin() === TRUE) {
+            $this->load->view('backend/backend_header_sidebar');
+            $this->load->view('backend/backend_footer');
+            $this->load->view('backend/edit_user',['user'=>$edit]);
+        }
+        else{
+            $this->user_handler->index();
+        }
+    }
+
+    public function editAdminOrDoctorUser($edit){
+        $isAdminOrDoctor = $this->user_handler->isAdminOrDoctorUser();
+        if ($isAdminOrDoctor === TRUE) {
+            $this->load->view('backend/admin/adminDashboardHeaderSidebar');
+            $this->load->view('backend/admin/adminFooter');
+            $this->load->view('backend/admin/editAdminUser',['user'=>$edit]);
+        }
+        else{
+            $this->user_handler->index();
+        }
+    }
+
+
+
     	
     public function update_user($email)
     {
@@ -64,7 +111,7 @@ class Users extends CI_Controller {
         $this->form_validation->set_rules('firstName', 'First Name', 'trim|required');
         $this->form_validation->set_rules('lastName', 'Last Name', 'trim|required');
         $this->form_validation->set_rules('post', 'Post', 'trim|required');
-        $this->form_validation->set_rules('phone', 'Phone Number', 'trim|required|integer|max_length[10]|min_length[10]');
+        $this->form_validation->set_rules('phone', 'Phone Number', 'trim|numeric|required|integer|max_length[10]|min_length[10]');
         $this->form_validation->set_rules('access', 'Access', 'trim|required');
         $this->form_validation->set_rules('address', 'Address', 'trim|required');
         $this->form_validation->set_rules('tole', 'Tole', 'trim|required');
@@ -87,6 +134,10 @@ class Users extends CI_Controller {
     	//$this->load->model('')
     	$delete = $this->User_model->delete_user($email);
 
+    }
+
+    public function validateDeletion($email){
+        
     }
 
 
