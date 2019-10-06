@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
   integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url();  ?>/assets/front/style.css">
- 
+
 
 </head>
 
@@ -25,23 +25,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <header class="col col-lg-12 col-md-12 col-sm-12"id="toShow">
 	<div class="row">
-		<div class="container-fluid">
+		<div class="container-fluid p-0">
 			<div class="jumbotron">
 				<div class="col-md-12 col-sm-12">
-			  		<h5 class="display-6" align="center">Nepal Veterinary Consultancy</h5>
+          <a href="<?php echo base_url();?>">
+            <img class="display-2" align="left"src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="45px" height="45px" padding="10px" class="d-inline-block align-top navBrand" alt="logo">
+	          <h1 class="text-center">Nepal Veterinary Consultancy</h1>
+          </a>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 
 	<div class="row">
-		<div class="container-fluid">
+		<div class="container-fluid p-0">
 			<nav class="navbar sticky-top navbar-expand-md navs">
-				
-					<a class="navbar-brand" href="<?php echo base_url();?>">
-						<img src="<?php echo base_url();  ?>/assets/images/vetcon_sample_logo.png" width="30" height="30" class="d-inline-block align-top navBrand" alt="logo">
-					</a>
 				  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				    	<span class="navbar-toggler-icon"></span>
 				  	</button>
@@ -59,26 +58,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				      		<li class="nav-item">
 				        		<a class="nav-link" href="<?php echo base_url();?>#doctors">Doctors</a>
 				      		</li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="<?php echo site_url("Appointment");?>#appointment">Appointment</a>
+                  </li>
 				       		<li class="nav-item">
 				        		<a class="nav-link" href="<?php echo base_url();?>#contact">Contact Us</a>
 				      		</li>
 				      		<li class="nav-item" id="staffLogin">
 				        		<a class="nav-link" href="
-					        		<?php 
-					        		$logged_in = $this->session->userdata('is_logged_in'); 
+					        		<?php
+					        		$logged_in = $this->session->userdata('is_logged_in');
 					        		$username = $this->session->userdata('userFname');
 
 					        		if($logged_in==TRUE)
 					        		{
 					        		  	echo site_url("Dashboard");
-					        		
+
 					        		}
 					        		else{
 					        			echo site_url("Login");
 					        		}
-					        		?> 
-				        		"> 
-				        			<?php 
+					        		?>
+				        		">
+				        			<?php
 				        					$btn_class = "btn btn-primary";
 
 				        					if($logged_in==TRUE) {
@@ -102,6 +104,3 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 </header>
-
-
-		
