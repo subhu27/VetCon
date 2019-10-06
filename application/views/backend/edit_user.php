@@ -19,7 +19,7 @@
                     <span class="col-md-3"></span>
                     <div class="col-md-6">
                       <div class="col-md-6">
-                      <?php //$this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
+                      <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
 
                       <?php echo form_open("Users/update_user/{$user->vuser_email}"); ?>
                       <form method="post">
@@ -82,7 +82,7 @@
 
 
                         </div>
-                        <div class="form-group email">
+                        <div class="form-group">
                           <label for="address">Address</label>
                            <?php echo form_error('address'); ?>
                           <input type="text" name="address" class="form-control" value="<?php echo set_value('address',$user->vuser_address);?>" id="address" placeholder="Enter Address">
@@ -93,7 +93,7 @@
                             </div>
 
 <!------------------------------------ User Tole ---------->
-                        <div class="form-group email">
+                        <div class="form-group">
                           <label for="address">Tole</label>
                            <?php echo form_error('tole'); ?>
                           <input type="text" name="tole" class="form-control" value="<?php echo set_value('tole',$user->vsuer_tole);?>" id="address" placeholder="Enter Tole">
@@ -101,9 +101,9 @@
 
 
 <!------------------------------------ User Description ---------->
-                        <div class="form-group email">
+                        <div class="form-group">
                           <label for="description">Describe User</label>
-                           <?php echo validation_errors('email'); ?>
+                           <?php echo form_error('desc');?>
                           <textarea type="text" name="desc" class="form-control" id="address"  placeholder="Describe User">
                             <?php echo set_value('desc',$user->vuser_description);?>
                           </textarea>

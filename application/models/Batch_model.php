@@ -20,7 +20,7 @@ class Batch_model extends CI_Model
 	        'vbatch_start_date' => $this->input->post('bSDate'),
 	        'vbatch_end_date' => $this->input->post('bEDate'),
 	        'vbatch_type' => $this->input->post('bType'),
-	        'vbatch_flock_size' => $this->input->post('bFSize'),
+	        'vbatch_death' => $this->input->post('bDeath'),
 	        'vbatch_flocks' => $this->input->post('bFlock'),
 	        'vbatch_heads' => $this->input->post('bHeads'),
 	        'vFarm_vfarm_id' => $this->input->post('bFarm')

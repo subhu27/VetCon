@@ -3,9 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
-private $hello;// = "I am a public hellow";
-//echo $this->$hello;
-
 	public function __construct()
     {
         //$params=$hello;
@@ -37,16 +34,12 @@ private $hello;// = "I am a public hellow";
             $this->load->view('backend/backend_header_sidebar');
             $this->load->view('backend/users', $result_rows);
             $this->load->view('backend/backend_footer');
-            echo $this->hello."<br>";
-            $hello = "changing hello form index";
-            echo $hello;
         }
 
     	
     }
 
     public function edit_user_handler($vuser_email){
-        $hello = "changing from somewhere else";
         $isSuperAdmin = $this->user_handler->isSuperAdmin();
         if ($isSuperAdmin===TRUE) {
             $edit=$this->User_model->find_user($vuser_email);
@@ -100,19 +93,18 @@ private $hello;// = "I am a public hellow";
         }
     	else{
             return $this->edit_user_handler($email);
-    		
-
-    	 
     	}
     }
 
 
-    public function userUpdateValidate(){
+    private function userUpdateValidate(){
         $this->form_validation->set_rules('firstName', 'First Name', 'trim|required');
         $this->form_validation->set_rules('lastName', 'Last Name', 'trim|required');
-        $this->form_validation->set_rules('post', 'Post', 'trim|required');
         $this->form_validation->set_rules('phone', 'Phone Number', 'trim|numeric|required|integer|max_length[10]|min_length[10]');
-        $this->form_validation->set_rules('access', 'Access', 'trim|required');
+        if($this->user_handler->isSuperAdmin()===TRUE){
+            $this->form_validation->set_rules('post', 'Post', 'trim|required');
+            $this->form_validation->set_rules('access', 'Access', 'trim|required');
+        }
         $this->form_validation->set_rules('address', 'Address', 'trim|required');
         $this->form_validation->set_rules('tole', 'Tole', 'trim|required');
         

@@ -39,23 +39,23 @@
 </div>
 
 
-
-  
-    <div class="form-group col-md-4">
-      <label for="bFSize"> Flock Size </label>
-      <input type="number" class="form-control" id="bFSize" placeholder="Flock Size" name="bFSize" min="1" <?php echo set_value('bFSize');?> >
+    <div class="form-row">
+      <div class="form-group col-md-4">
+      <label for="bHeads"> Head Counts </label>
+      <input type="number" class="form-control" id="bHeads" placeholder="Batch Head Counts" name="bHeads" min="1" <?php echo set_value('bHeads');?> >
     </div>
+
     <div class="form-group col-md-4">
       <label for="bFlock"> Flocks </label>
       <input type="number" class="form-control" id="bFlock" placeholder="Batch Flocks" name="bFlock" min="1" <?php echo set_value('bFlock');?> >
     </div>
-  </div>
-
-<div class="form-row">
-     <div class="form-group col-md-4">
-      <label for="bHeads"> Head Counts </label>
-      <input type="number" class="form-control" id="bHeads" placeholder="Batch Head Counts" name="bHeads" min="1" <?php echo set_value('bHeads');?> >
+  
+    <div class="form-group col-md-4">
+      <label for="bDeath"> Death In Flock </label>
+      <input type="number" class="form-control" id="bDeath" placeholder="Death in flock" name="bDeath" min="0" <?php echo set_value('bDeath');?> >
     </div>
+    
+  </div>
 
      <div class="form-group col-md-8">
                           <label for="post"> Batch Farm </label> <br>

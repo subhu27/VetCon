@@ -34,7 +34,7 @@ class Batch extends CI_Controller {
         $this->form_validation->set_rules('bSDate', 'Batch Start Date', 'trim|required|Date');
         $this->form_validation->set_rules('bEDate', 'Batch End Date', 'trim|Date');
         $this->form_validation->set_rules('bType', 'Batch Type', 'trim|required');
-        $this->form_validation->set_rules('bFSize', 'Batch Flock Size', 'trim|required');
+        $this->form_validation->set_rules('bDeath', 'Batch Flock Size', 'trim');
         $this->form_validation->set_rules('bFlock', 'Flocks', 'trim|required');
         $this->form_validation->set_rules('bHeads', 'Head Counts', 'trim|required');
         $this->form_validation->set_rules('bFarm', 'Batch Farm', 'trim|required');

@@ -16,14 +16,13 @@ class Message_model extends CI_Model
 
         public function addMessage()
         {
-        	$time = now('Asia/Kathmandu');
-	    $data = array(
-	        'vmessage_name' => $this->input->post('name'),
-	        'vmessage_phone' => $this->input->post('phone'),
-	        'vmessage_subject' => $this->input->post('subject'),
-	        'vmessage_message' => $this->input->post('message'),
-	        'vmessage_timestamp'=>$time
-	    );
+        	//$time = now('Asia/Kathmandu');
+		    $data = array(
+		        'vmessage_name' => $this->input->post('name'),
+		        'vmessage_phone' => $this->input->post('phone'),
+		        'vmessage_subject' => $this->input->post('subject'),
+		        'vmessage_message' => $this->input->post('message')
+		    );
 
 	    $this->db->insert('vmessage', $data);
 	    if ($this->db->affected_rows()==1) {
@@ -38,7 +37,7 @@ class Message_model extends CI_Model
         public function getMessage()
         {
         	$this->db->from('vmessage');
-        	$this->db->order_by('vmessage_timestamp','dsc');
+        	$this->db->order_by('vmessage_timestamp','asc');
         	$query = $this->db->get();
         	return $query->result();
 
