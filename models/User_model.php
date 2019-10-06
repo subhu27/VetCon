@@ -43,7 +43,7 @@ class User_model extends CI_Model {
 
 //checks whether the user is valid or not, is called from Login/user_check with the parameters -- email and password of the users 
 
-	public function login_check($email, $pass, $user_access)
+	public function login_check($email, $pass)
 	{
 	    $user_access = 1;
 	    $this->db->where('vuser_email', $email);
@@ -52,6 +52,25 @@ class User_model extends CI_Model {
 	    //to restrict unauthorised user
 	    $query = $this->db->get('vuser');
 	    return $query;
+	}
+
+	public function validateLoginM(){
+		$user_access = 1;
+		$email  =   $this->input->post('emailL');
+	    $pass  =   md5($this->input->post('passwordL'));
+		$this->db->where('vuser_email', $email);
+	    $this->db->where('vuser_password', $pass);
+	    $this->db->where('vuser_access', $user_access);
+	    $query = $this->db->get('vuser');
+	    // checking the returned row from the query
+	   	if ($query->num_rows() == 1) {
+	   	
+		    return TRUE;
+		}
+	    else{
+	    	return FALSE;
+	    }
+
 	}
 
 //function to select the list doctors
@@ -67,9 +86,10 @@ class User_model extends CI_Model {
 
 //function to select the list of the users
 
-	public function display_users(){
+	public function display_users($userEmail){
 		$this->db->from('vuser');
 		$this->db->order_by('vuser_fname','asc');
+		$this->db->where_not_in('vuser_email',$userEmail);
 		$query = $this->db->get();
 		return $query->result();
 	}
