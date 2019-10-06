@@ -32,13 +32,13 @@
       		<td><?php echo $row->vuser_phone;?></td>
       		<td><?php echo $row->vuser_access; $i=$i+1;?> </td>
       		<td> 
-      			
-      				<a class="btn btn-success" href="<?php echo ("Users/edit_user_handler/{$row->vuser_email}") ?>" > Edit 
+      			<button class="btn btn-success">
+      				<a href="<?php echo ("Users/edit_user_handler/{$row->vuser_email}") ?>" > Edit 
       				</a> 
-      			  
-      			
-      				<a class="btn btn-danger" href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" > Delete 
-      				</a> <br> </td>  
+      			</button>  
+      			<button class="btn btn-danger" onclick="confirm('Are you sure you want to delete ?')"> 
+      				<a href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" > Delete 
+      				</a> </button> <br> </td>  
 
 
       	</tr>
