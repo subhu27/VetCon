@@ -17,7 +17,7 @@
               <div class="row">
                     <span class="col-md-3"></span>
                     <div class="col-md-6">
-                      <?php echo validation_errors(); ?>
+                      <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
 
                       <?php echo form_open('register/register_user'); ?>
                       <form method="post">
@@ -26,14 +26,14 @@
 <!-- -------------------------------------------First Name field----------------------------------->
 
                           <label for="firstName">First Name</label>
-                          <?php //echo validation_errors('firstName'); ?>
+                          <?php echo form_error('firstName'); ?>
                           <input type="text" name="firstName" class="form-control" value="<?php echo set_value('firstName');?>" id="firstName" aria-describedby="firstNameHelp" placeholder="Enter First Name">
 
 
 <!-- -------------------------------------------Last Name field----------------------------------->
 
                           <label for="lastName">Last Name</label>
-                          <?php //echo validation_errors('lastName'); ?>
+                          <?php echo form_error('lastName'); ?>
                           <input type="text" name="lastName" class="form-control" value="<?php echo set_value('lastName');?>" id="lastName" aria-describedby="lastNameHelp" placeholder="Enter Last Name">
                           
 
@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group email">
                           <label for="email">Email address</label>
-                           <?php //echo validation_errors('email'); ?>
+                           <?php echo form_error('email'); ?>
                           <input type="email" name="email" class="form-control" value="<?php echo set_value('email');?>" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                          
 
@@ -50,7 +50,7 @@
                         </div>
                         <div class="form-group phoneNumber">
                           <label for="phoneNumber">Phone Number</label>
-                          <?php //echo validation_errors('phoneNumber'); ?>
+                          <?php echo form_error('phoneNumber'); ?>
                           <input type="tel" name="phoneNumber" pattern=".{10}" value="<?php echo set_value('phoneNumber');?>" class="form-control" id="phoneNumber" aria-describedby="phoneNumberHelp" placeholder="Enter Your Phone Number">
                           
 
@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
                           <label for="password">Password</label>
-                          <?php //echo validation_errors('password'); ?>
+                          <?php echo form_error('password'); ?>
                           <input type="password" name="password" class="form-control" placeholder="Password" id="password" >
                           
 
@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">
                           <label for="rePassword">Re - Password</label>
-                          <?php //echo validation_errors('rePassword'); ?>
+                          <?php echo form_error('rePassword'); ?>
                           <input type="password" class="form-control" name="conf_password" placeholder="Retype Password">
                           <br>
                           

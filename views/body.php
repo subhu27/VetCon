@@ -10,8 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- this is the body of the landing page -->
 
-<div class="container-fluid">
-  		<div class="slider" id="home">
+<div class="container-fluid p-0">
+  		<div class="slider" id="home" >
 		    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		  <ol class="carousel-indicators">
 		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -20,13 +20,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  </ol>
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <img class="d-block w-100 img-fluid center" src="<?php echo base_url(); ?>/assets/images/img2.jpg" alt="First slide">
+		      <img class="d-block w-100 img-fluid center" src="<?php echo base_url(); ?>/assets/images/img1.jpg" alt="First slide">
 		    </div>
 		    <div class="carousel-item ">
 		      <img class="d-block w-100 img-fluid center" src="<?php echo base_url(); ?>/assets/images/img2.jpg" alt="Second slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100 img-fluid center" src="<?php echo base_url(); ?>/assets/images/img1.jpg" alt="Third slide">
+		      <img class="d-block w-100 img-fluid center" src="<?php echo base_url(); ?>/assets/images/img3.jpg" alt="Third slide">
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="col-md-12">
             <h5>About Us</h5>
             <hr>
-            <p class="col-md-12">Nepal Veterinary Consultancy resides in that part of the country that shares the 80% production of chicken live stock and egg production, while the area also serves a quarter in milk production to the nation. This truly means, Vetcon has more opportunities then any other veterinary organization in the nation. The young team of our client has the clear vision to over take any other veterinary clinics not only in the area but aim to spread over the country.</p>
+            <p class="col-md-12">Nepal Veterinary Consultancy resides in the part of the country that shares 80% production of chicken live stock and egg production, while the area also serves a quarter in milk production to the nation. This truly means, Vetcon has more opportunities then any other veterinary organization in the nation. The young team of our client has the clear vision to over take any other veterinary clinics not only in the area but aim to spread over the country.</p>
           </div>
         </div>
       </div>
@@ -61,8 +61,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="center">
         <div class="col-md-12">
           <h5>Services</h5>
-          <hr>
           <p class="lead text-center">We provide professional, efficient and reliable veterinary services</p>
+          <hr>
         </div>
       </div>
     </div>
@@ -71,27 +71,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container-fluid">
       <div class="text-center">
         <div class="col-md-12">
-        <div class="row"> 
+        <div class="row">
           <span class="col-md-1"></span>
           <div class="col-md-3">
-            <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/vacc.jpg">
+            <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/vaccination.jpg" witch=360px height=240px>
             <h6>Vaccination</h6>
             <p>Our doctors and technician team are well equipped and trained to perform the vaccination.</p>
           </div>
           <span class="col-md-1"></span>
           <div class="col-md-3">
-            <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/treatment.jpg">
+            <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/farm visit.jpg">
             <h6>Farm Visit</h6>
             <p>Nepal Veterinary Consultancy's doctors visits the farm which gives the farm owner leverage to fix the issues in the farm that may lead to the mortality of the birds / animals reared.
             </p>
           </div>
           <span class="col-md-1"></span>
           <div class="col-md-3">
-            <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/surgery.jpg">
+            <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/post-mortem.jpg">
             <h6>Post-mortem</h6>
             <p>NVC is equipped with a very advance instruments in the lab to perform the culture test and post-mortem giving our clients quick diagnosis and prescription.</p>
           </div>
-        </div> 
+        </div>
         </div>
       </div>
     </div>
@@ -104,8 +104,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="center">
           <div class="col-md-12">
             <h5>Doctors</h5>
+              <p class="lead text-center">Our doctors are experienced, skilled and reliable</p>
             <hr>
-            <p class="lead text-center">Our doctors are experienced, skilled and reliable</p>
           </div>
         </div>
       </div>
@@ -116,35 +116,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="col-md-12">
       <div class="text-center">
       <div class="row">
-        
-        <?php
-        foreach ($query as $row) {
-        ?>
-
+        <span class="col-md-1"></span>
+        <div class="col-md-3">
+          <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drSonam.jpg">
+          <h6>Dr.Sonam Bhandari</h6>
+          <p>Sonam completed her BVSc. (Bachelors of Veterinary Science) from IAAS, Rampur Campus. Since her completion in 2015
+            she has been practising her skills in Animal Science in Nepal Veterinary Concultancy.</p>
+        </div>
+        <span class="col-md-1"></span>
+        <div class="col-md-3">
+          <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drSulav.jpg">
+          <h6>Dr.Sulav Raj Thapaliya</h6>
+          <p>Dr.Sulav started practising in Nepal Veterinary Consultancy since 2017 after his completing his BVSc & AH in 2016 from Purbanchal University, Dharan. He is one of the doctor taking the most cases of NVC. Apart from practising in clinic he also visit farms.
+            His interest in technology makes gives him the alias of "clinic geek" in the clinic.
+          </p>
+        </div>
+        <span class="col-md-1"></span>
         <div class="col-md-3">
           <img class="img-fluid" src="<?php echo base_url(); ?>/assets/images/drNimesh.jpg">
-          <h6> Dr. <?php echo $row->vuser_fname." ".$row->vuser_lname; ?></h6>
-          <p> <?php echo $row->vuser_description;  ?> </p>
+          <h6>Dr.Nimesh Khanal</h6>
+          <p>Dr. Nimesh Khanal is a doctor but yet he chooses to become an administrative staff.
+            He is among the backbone of the clinic who handles all the stuff to make sure it is up and running.</p>
         </div>
-        <span class="col-md-1"></span>
-
-      <?php } ?>
-
-        <!-- 
-        <span class="col-md-1"></span>
-        <div class="col-md-3">
-          <img class="img-fluid" src="<?php //echo base_url(); ?>/assets/images/drSulav.jpg">
-          <h6>Dr. Sulav Raj Thapaliya</h6>
-          <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-        </div>
-        <span class="col-md-1"></span>
-        <div class="col-md-3">
-          <img class="img-fluid" src="<?php //echo base_url(); ?>/assets/images/drSonam.jpg">
-          <h6>Dr. Sonam Bhandari</h6>
-          <p>Lorem ipsum dolor sit ame consectetur adipisicing elit</p>
-        </div>
-
-      -->
       </div>
       </div>
       </div>
@@ -157,10 +150,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container-fluid">
           <div class="col-md-12">
             <h5 > Contact Us </h5>
+            <p class="lead text-center">Keep in touch</p>
             <hr>
           </div>
         </div>
-      </div>  
+      </div>
       <div class="row">
         <div class="container-fluid">
           <div class="col-md-12">
@@ -172,42 +166,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               </div>
 
-              <span class="col-md-1"></span>
-              <div class="col-md-5"> 
+              <div class="col-md-6">
                 <h6 class="text-center"> Message Us </h6>
                 <h6>Please tell us your requires, we will respond you soon.</h6>
-                <div id="sendmessage">Your message has been sent. Thank you!</div>
-                <div id="errormessage"></div>
-                <form action="<?php echo site_url('Message/addMessage')?>" method="post" role="form" class="contactForm">
+                <div id="sendmessage">
+
+                  <p class="text-success text-center">
+                  <?php echo $this->session->flashdata('contactUs');?>
+
+                  </p>
+
+                </div>
+
+                <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
+
+                <?php echo form_open('Message/addMessage'); ?>
+
+
+                <form method="post" role="form" class="contactForm">
                   <div class="form-group">
                     <label for="name">Your Name * </label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
+                    <?php  echo form_error('name'); ?>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" value="<?php echo set_value('name');?>" />
+
                 </div>
                 <div class="form-group">
                   <label for="phone">Your Phone * </label>
-                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="phone" data-msg="Please enter a valid phone number" />
-                  <div class="validation"></div>
+                  <?php  echo form_error('phone'); ?>
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone"  value="<?php echo set_value('phone');?>" />
                 </div>
                 <div class="form-group">
                   <label for="subject">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
+                  <?php  echo form_error('subject'); ?>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" value="<?php echo set_value('subject');?>" />
+
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea class="form-control" name="message" rows="5" data-msg="Please write something for us"></textarea>
-                  <div class="validation"></div>
+                  <?php  echo form_error('message'); ?>
+                  <textarea class="form-control" name="message" value="<?php echo set_value('message');?>"></textarea>
+
                   <i>* - required</i>
                 </div>
 
                 <button type="submit" class="btn btnMsg">Send</button>
               </form>
+              <? echo form_close(); ?>
           </div>
         </div>
-        <hr>
       </div>
     </div>
   </section>
-    
-
