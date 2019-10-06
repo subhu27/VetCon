@@ -34,13 +34,13 @@
       		<td><?php echo $row->vfarm_name;
            $i=$i+1;?> </td>
       		<td> 
-      			<button class="btn btn-success">
-      				<a href="<?php echo ("editClient/{$row->vclient_id}") ?>" > Edit 
+      
+      				<a class="btn btn-success" href="<?php echo ("editClient/{$row->vclient_id}") ?>" > Edit 
       				</a> 
-      			</button>  
-      			<button class="btn btn-info"> 
-      				<a href="<?php echo ("viewClient/{$row->vclient_id}") ?>" > View Details
-      				</a> </button> <br> </td>  
+      			 
+      			
+      				<a class="btn btn-info" href="<?php echo ("viewClient/{$row->vclient_id}") ?>" > View Details
+      				</a>  <br> </td>  
 
 
       	</tr>
