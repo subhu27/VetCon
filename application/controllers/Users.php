@@ -21,6 +21,7 @@ class Users extends CI_Controller {
     public function index(){
 
         $userCheck = $this->user_handler->isSuperAdmin();
+        $userEmail = $this->session->userdata('userEmail');
         /*
         *Only allows 'Super Admin' users to run the else statement otherwise redirects it to the respective dashboard view
         this is essentail for using the code.
@@ -30,7 +31,7 @@ class Users extends CI_Controller {
             $this->user_handler->index();
         }
         else{
-            $result_rows['query']= $this->User_model->display_users();
+            $result_rows['query']= $this->User_model->display_users($userEmail);
             $this->load->view('backend/backend_header_sidebar');
             $this->load->view('backend/users', $result_rows);
             $this->load->view('backend/backend_footer');
@@ -86,7 +87,7 @@ class Users extends CI_Controller {
     	   $this->load->model('User_model');
     	   $result = $this->User_model->update_user_data($email);
     	   if ($result===TRUE) {
-                $message = $email.","." this user is updated successfully";
+                $message = $email.","." is updated successfully";
                 $this->session->set_flashdata('userUpdate',$message);
                 return redirect('Users');
             }
