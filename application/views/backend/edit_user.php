@@ -110,13 +110,17 @@
                           <br>
                                                   
                           
-<!-------------------------------------------- Buttons for registration and login    -- >
+<!-------------------------------------------- Buttons for update and cancel-->
                         </div>
-                        <!-- Register Button-->
+
                         <div class="buttons">
-                          <button class="btn btn-primary"  type="submit">Cancel</button>
+                          <a href="<?php echo site_url('Users');?>">
+                            <button class="btn btn-primary" type="button">  Cancel  </button>
+                          </a>
+                          <span class="col-1"></span>
+
+
                           <button class="btn btn-success"  type="submit">Update</button>
-                        <!-- Login Button-->
                         </div>
                       <? echo form_close(); ?>
                       </form>
