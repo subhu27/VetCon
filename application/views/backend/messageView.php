@@ -31,8 +31,8 @@
 
       		<td><?php echo $row->vmessage_read; 
 
-          $i=$i+1;?><a href="Message/displayMessage/{$row->vmessage_id}" class="btn btn-success">Read</a> </td>
-      		
+          $i=$i+1;?> </td>
+      		<td> 
       			
 
 

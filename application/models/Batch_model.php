@@ -33,6 +33,15 @@ class Batch_model extends CI_Model
 
        }
 
+       public function getBatchData($id){
+       	$this->db->select('*');
+       	$this->db->from('vbatch');
+  		$this->db->where('vbatch_id',$id);
+  		$query = $this->db->get();
+  		return $query->result();
+
+       }
+
 }
 
 

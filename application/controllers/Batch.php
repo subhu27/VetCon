@@ -27,6 +27,11 @@ class Batch extends CI_Controller {
 
     	}
 
+      public function editBatch($id){
+        $this->index();
+      }
+
+
 
       public function addBatch()
       {

@@ -2,7 +2,10 @@
       <div class="container-fluid">
         <h1 class="mt-4"> Users</h1>
         <p class="text-success text-center">
-                <?php echo $this->session->flashdata('userUpdate');?>
+                <?php 
+                    echo $this->session->flashdata('userUpdate');
+                    echo $this->session->flashdata('deleteError');
+                ?>
                 
               </p>
 
@@ -37,7 +40,7 @@
       				</a> 
       			</button>  
       			<button class="btn btn-danger" onclick="confirm('Are you sure you want to delete ?')"> 
-      				<a href="<?php echo ("Users/delete_user_handler/{$row->vuser_email}") ?>" > Delete 
+      				<a href="<?php echo ("Users/deleteUser/{$row->vuser_email}") ?>" > Delete 
       				</a> </button> <br> </td>  
 
 

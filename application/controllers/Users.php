@@ -3,12 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
+    public $isSuperAdmin;
+
 	public function __construct()
     {
         //$params=$hello;
        	parent::__construct();
        	$this->load->model('User_model');
         $this->load->library('form_validation');
+        $this->isSuperAdmin=$this->user_handler->isSuperAdmin();
        	$userCheck = $this->user_handler->isAnyUser();
         if ($userCheck === FALSE ) {
             $this->user_handler->index();
@@ -19,6 +22,7 @@ class Users extends CI_Controller {
 //reterieves the users from the database and passes to the 'users' view
 
     public function index(){
+        echo $this->session->userdata('session_id');
 
         $userCheck = $this->user_handler->isSuperAdmin();
         $userEmail = $this->session->userdata('userEmail');
@@ -27,10 +31,11 @@ class Users extends CI_Controller {
         this is essentail for using the code.
         *
         */
-        if ($userCheck === FALSE ) {
+        if ($this->isSuperAdmin === FALSE ) {
             $this->user_handler->index();
         }
         else{
+            echo $this->session->userdata('session_id');
             $result_rows['query']= $this->User_model->display_users($userEmail);
             $this->load->view('backend/backend_header_sidebar');
             $this->load->view('backend/users', $result_rows);
@@ -41,8 +46,7 @@ class Users extends CI_Controller {
     }
 
     public function edit_user_handler($vuser_email){
-        $isSuperAdmin = $this->user_handler->isSuperAdmin();
-        if ($isSuperAdmin===TRUE) {
+        if ($this->isSuperAdmin===TRUE) {
             $edit=$this->User_model->find_user($vuser_email);
             $this->editSuperAdminUser($edit);
         }
@@ -55,7 +59,7 @@ class Users extends CI_Controller {
     }
 
     public function editSuperAdminUser($edit){
-        if ($this->user_handler->isSuperAdmin() === TRUE) {
+        if ($this->isSuperAdmin === TRUE) {
             $this->load->view('backend/backend_header_sidebar');
             $this->load->view('backend/backend_footer');
             $this->load->view('backend/edit_user',['user'=>$edit]);
@@ -80,8 +84,7 @@ class Users extends CI_Controller {
 
 
     	
-    public function update_user($email)
-    {
+    public function update_user($email){
         $updateValidation = $this->userUpdateValidate();
         if ($updateValidation===TRUE) {
     	   $this->load->model('User_model');
@@ -119,19 +122,47 @@ class Users extends CI_Controller {
 
     }
 
+    //checks the user before deletion
+    public function deleteUser($email){
+        if($this->isSuperAdmin===TRUE){
+            if($this->session->userdata('userEmail') ===$email){
+                $deleteError = "You can not delete this user";
+                $this->session->set_flashdata('deleteError',$deleteError);
+                return redirect('Users');
+            }
+            else{
+                $this->User_model->delete_user($email);
+            }
+        }
+        else{
 
-
-
-    public function delete_user_handler($email){
-
-    	//$this->load->model('')
-    	$delete = $this->User_model->delete_user($email);
-
+            $this->user_handler->index();
+        }
+        
     }
 
+
+    /* Not needed now
+    *
+
+    private function delete_user_handler($email){
+        if ($this->isSuperAdmin===TRUE) {
+            $delete = $this->User_model->delete_user($email);
+        }
+        else{
+            $this->session->set_flashdata('deleteError',$deleteError);
+        }
+    	
+
+    }
+    *
+    */
+
+    /*
     public function validateDeletion($email){
         
     }
+    */
 
 
 }

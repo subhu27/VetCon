@@ -28,7 +28,7 @@
                     <div class="col-md-6">
                       <?php $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');?>
 
-                      <?php echo form_open('Login/validateLogin'); ?>
+                      <?php echo form_open('Login/login'); ?>
                       <form method="post">
                         <div class="form-group">
                         <label for="email">Email address</label>
@@ -42,6 +42,9 @@
                           <?php  echo form_error('passwordL'); ?>
                           <input type="password" name="passwordL" class="form-control" id="password" placeholder="Password">
                         </div>
+                        <div class="text-center" style="margin: 50px;">
+                        <?php echo $this->session->flashdata('forgetPassword');?>
+                      </div>
                         <div class="buttons">
                           <button class="btn btn-login" type="submit">Staff - Login</button>
                           <button class="btn btn-login"> 

@@ -150,8 +150,9 @@
       <th scope="col">Start Date</th>
       <th scope="col">End Date</th>
       <th scope="col">Type</th>
-       <th scope="col">Total Count</th>
-        <th scope="col">Death</th>
+      <th scope="col">Total Count</th>
+      <th scope="col">Death</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -167,6 +168,9 @@
       <td><?php echo $detail->vbatch_type; ?></td>
       <td><?php echo $detail->vbatch_heads; ?></td>
       <td><?php echo $detail->vbatch_death; ?></td>
+      <?php $id = $detail->vbatch_id;?>
+      <td><button class="btn btn-warning"> <a href="<?php echo site_url("Batch/editBatch/{$id}");?>" > <?php echo $detail->vbatch_id;?> Edit </a> </button></td>
+
     </tr>
 
   <?php endforeach; ?>

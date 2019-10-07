@@ -86,9 +86,10 @@ class User_model extends CI_Model {
 
 //function to select the list of the users
 
-	public function display_users(){
+	public function display_users($userEmail){
 		$this->db->from('vuser');
 		$this->db->order_by('vuser_fname','asc');
+		$this->db->where_not_in('vuser_email',$userEmail);
 		$query = $this->db->get();
 		return $query->result();
 	}
