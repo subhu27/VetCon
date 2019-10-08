@@ -1,0 +1,219 @@
+.jumbotron {
+	margin: 0px;
+	max-height: 80px;
+	padding: 10px;
+	background-color: #f4d942;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.jumbotron h6{
+	color: #0fa870;
+	padding-bottom:20px;
+	margin:0px;
+}
+
+.navs{
+	background-color: #f4d942;
+	margin-top: 3px;
+
+}
+
+#toShow{
+
+	z-index: 20;
+	position: fixed;
+	clear: both;
+}
+
+.navs .navbar-toggler{
+	background-color: #808e003b;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+	background-image: url(../images/hambug.svg);
+}
+
+
+
+#fixHeader{
+	height: 116px;
+}
+
+#home{
+	z-index: 18;
+  padding-left:10%;
+	padding-right: 10%;
+	background:#c0c5c7;
+
+}
+
+.login-page, .register-page{
+	margin-top: 200px;
+	z-index:9;
+}
+
+.menu-a {
+	color:gray;
+	font-size: 1.5rem;
+	text-decoration:none;
+	text-align: center;
+	margin-left: 15px;
+	margin-right:15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	display:flex;
+}
+
+.menu-a:hover, .menu-a:focus {
+  text-decoration: none;
+	background:#FF9800;
+  color: white;
+	border-radius:5px;
+}
+
+.menu-a:active {
+	background:#FF9800;
+	color: white;
+
+}
+
+#about{
+	z-index: 16;
+  background:#e2dfd7;
+  padding-top:150px;
+	padding-bottom:50px;
+	padding-right: 80px;
+}
+
+.about-p{
+  padding-left: 10%;
+	padding-right: 10%;
+	font-size: 1.3rem;
+	color: gray;
+}
+
+.bigger-p{
+  padding-left: 10%;
+	padding-right: 10%;
+	font-size: 1.3rem;
+	color: gray;
+	text-align: center;
+}
+
+#doctors{
+	z-index: 15;
+  padding-top:150px;
+	padding-bottom:50px;
+	padding-right: 80px;
+	background:#e2dfd7
+}
+
+#services{
+	z-index: 14;
+  padding-top:150px;
+	padding-bottom:50px;
+	padding-right: 80px;
+}
+
+#contact{
+	z-index: 13;
+	padding-top:150px;
+	padding-bottom:20px;
+}
+
+.appointment{
+	padding-top: 185px;
+}
+
+.btnMsg, .btn-login{
+	color: #0fa870;
+	font-size: 1.3rem;
+	background-color: #f4d942;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.brand-text{
+	font-size: 2.5rem;
+	text-decoration:none;
+	color:#0fa870;
+	text-align:center;
+}
+
+.btnMsg:hover, .btn-login:hover{
+	color:#0fa870;
+	text-decoration: none;
+	background-color: #f4ee42b3
+}
+
+.btn-login a{
+	color:#0fa870;
+	text-decoration: none;
+}
+
+.btn, .btn:hover{
+	color:  #0fa870;
+}
+
+.btnStfLogin{
+  font-size: 1.3rem !important;
+	border-radius:10px;
+	color: #fff;
+  background-color: #007bff;
+
+}
+
+.footer {
+	z-index: 1;
+	background-color: #f4d942;
+	padding-left: 40%;
+}
+
+hr {
+	width: 50%;
+	background-color: orange;
+	height:8px;
+}
+
+
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  h5 {
+    font-size: 2em;
+  }
+
+
+  .container-fluid{
+	width: 100%;
+}
+
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  h5 {
+    font-size: 1.1em;
+  }
+
+
+  .jumbotron {
+	margin: 0px;
+	max-height: 50px;
+}
+
+
+.container-fluid{
+	width: 96%;
+	margin-right: 0%;
+	margin-left: 2%;
+}
+
+.copyright {
+	font-size: 1.2em;
+}
+
+}
