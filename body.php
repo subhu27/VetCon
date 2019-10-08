@@ -98,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
   </section>
 
-  <section id="c">
+  <section id="doctors">
     <div class="row">
       <div class="container-fluid">
         <div class="center">
