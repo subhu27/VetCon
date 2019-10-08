@@ -64,8 +64,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				       		<li class="nav-item">
 				        		<a class="menu-a" href="<?php echo base_url();?>#contact">Contact Us</a>
 				      		</li>
-				      		<li class="nav-item" id="staffLogin">
-				        		<a class="menu-a" href="
+				      		<li class="btnStfLogin" id="staffLogin">
+				        		<a  href="
 					        		<?php
 					        		$logged_in = $this->session->userdata('is_logged_in');
 					        		$username = $this->session->userdata('userFname');
@@ -81,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					        		?>
 				        		">
 				        			<?php
-				        					$btn_class = "btn-primary";
+				        					$btn_class = "btnStfLogin";
 
 				        					if($logged_in==TRUE) {
 				        						echo "<button class=\"".$btn_class."\"> Admin </button>";
