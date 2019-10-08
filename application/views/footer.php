@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- footer of the landing page / front end -->
   <footer>
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
     	<div class="footer">
 	      <div class="col-md-12">
 	      	<ul>
@@ -14,17 +14,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		        <li><i class="fa fa-phone fa"></i> +38 000 129900</li>
 		        <li><i class="fa fa-envelope fa"></i> drnimeshkhanal@gmail.com</li>
 	        </ul>
-	        <hr>
-	        <p class="copyright text-center">&copy All rights reserved at Nepal Veterinary Consultancy Pvt. Ltd. , <?php echo date("Y"); ?> </p>
-	        <br>
+	       <div class="col-md-12"
+	           <p class="copyright text-center">&copy All rights reserved at Nepal Veterinary Consultancy Pvt. Ltd. , <?php echo date("Y"); ?> </p>
+	           <br>
+	        </div>
+	      		
+      			
+      		</div>	
 
 	       </div>
+	       
       	</div>
+
     </div>
-
-
-
  </footer>
+
+ <div class="container-fluid p-0">
+
+ <div class="noticeBar" id="noticeBar">
+	       	<div class="col-md-12">
+	       		
+	       		<p >
+	       		<marquee behavior="scroll" direction="left" >
+
+	       		<a href="#">	
+	 				This is general text. ther ewajldlf sdfj sdflksd
+	 			</a> 
+	 			<a href=""> jsdkjflsdj lfkjdsf jsdlfj lsdfd fjlsdjf
+	 			</a> 
+	 			<a href="#"> dlsjf sldfj fjsdkljfiweu lfd jslkflsjew jfkl jljsd f ljdkfsdljfsd sdk fsdf jsdf lsdlfkj
+	 			</a> 
+	 		</marquee>
+	 			
+	 			</p>
+	       	</div>
+
+
+	       </div>
+</div>
+ 
 
 
 <!-- Optional JavaScript -->
