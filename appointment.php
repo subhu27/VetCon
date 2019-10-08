@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 
 <section class="appointment" id="appointmentpg">
   <div class="row">
@@ -6,7 +11,7 @@
         <div class="row">
           <span class="col-md-3"></span>
           <div class="col-md-6">
-            <h4 class="text-center"> Appointment form </h4>
+            <h4 class="text-center">Appointment form</h4>
             <hr>
             <div id="appointment">
               <p class="text-success text-center">
@@ -32,23 +37,6 @@
               <input type="text" class="form-control" name="email" id="email" placeholder="Your email address" value="<?php echo set_value('email');?>" />
             </div>
 
-            <div class="well">
-              <div id="datetimepicker1" class="input-append date">
-                <input data-format="dd/MM/yyyy hh:mm:ss" type="text"></input>
-                <span class="add-on">
-                  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
-                  </i>
-                </span>
-              </div>
-            </div>
-            <script type="text/javascript">
-              $(function() {
-                $('#datetimepicker1').datetimepicker({
-                  language: 'pt-BR'
-                });
-              });
-            </script>
-
             <div class="form-group">
               <label for="phone">Phone * </label>
               <?php  echo form_error('phone'); ?>
@@ -56,13 +44,12 @@
             </div>
             <div class="form-group">
                 <label for="date">Appointment date * </label>
-                <input type="text" name="appointmentDate" class="form-control" id="appointmentDate" placeholder="Appointment date" value="<?php echo set_value('appointmentDate');?>" />
+                <input type="text" id="datepicker">
             </div>
 
             <div class="form-group">
                 <label for="date">Appointment time * </label>
-                <?php  echo form_error('time'); ?>
-                <input type="text" name="appointmentTime" class="form-control" id="appointmentTime" placeholder="Appointment time" value="<?php echo set_value('appointmentTime');?>" />
+                <input type="text" id="timepicker">
             </div>
             <div class="form-group">
               <label for="message">Message</label>
@@ -78,3 +65,9 @@
   </div>
 </div>
 </section>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
+</script>
